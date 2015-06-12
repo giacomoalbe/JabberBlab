@@ -12,11 +12,11 @@ public class DBManager {
     private PrintWriter out;
     
     // Dati relativi alla connessione al DB
+    private static final String DB_PATH = "/Users/giacomo/NetBeansProjects/JabberBlab2/";
     private static final String DB_NAME = "JabberBlabDB";
     private static final String DB_BACKUP = "backups/JabberBlabDB";
     private static final String DB_DRIVER = "org.apache.derby.jdbc.EmbeddedDriver";
-    private static final String DB_CONNECTION = "jdbc:derby:"
-            + DB_NAME;
+    private static final String DB_CONNECTION = "jdbc:derby:" + DB_PATH + DB_NAME;
     
     // Inizializzazione delle variabili usate per connettersi al DB
     private PreparedStatement preparedStatement = null;
@@ -87,12 +87,6 @@ public class DBManager {
                 dbConnection.close();
             }
         }
-    }
-    
-    public void closeDB() throws SQLException {
-        // Usato per chiudere la connessione al DB! Altrimenti da errore!
-        // In quanto stiamo usando il DB da due diversi thread contemporaneamente
-        DriverManager.getConnection("jdbc:derby:ProvaUtenti;shutdown=true");
     }
   
 }

@@ -10,8 +10,6 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -41,17 +39,14 @@ public class AddUserServlet extends HttpServlet {
                 conn.close();
             }
             } catch (SQLException e) {
-                
+                System.out.println("Chiusura della connessione in Servlet");
             }
             
-            manager.closeDB();
             /*try {
                 manager.addUser(username, password);
             } catch (SQLException e) {
                 System.out.println("Errore in ServletAddUser: " + e.toString());
             }*/
-        } catch (SQLException ex) {
-            Logger.getLogger(AddUserServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -83,15 +78,5 @@ public class AddUserServlet extends HttpServlet {
             throws ServletException, IOException {
         processRequest(request, response);
     }
-
-    /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
-     */
-    @Override
-    public String getServletInfo() {
-        return "Short description";
-    }// </editor-fold>
 
 }

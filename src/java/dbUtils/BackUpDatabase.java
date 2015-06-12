@@ -44,7 +44,9 @@ public class BackUpDatabase {
         System.out.println("backed up database to "+backupdirectory);
         
         if (dbConnection != null) {
+            
             dbConnection.close();
+            System.out.println("Database chiuso");
         }
         
         
