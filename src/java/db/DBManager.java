@@ -13,7 +13,7 @@ public class DBManager {
     
     // Dati relativi alla connessione al DB
     private static final String DB_DRIVER = "org.apache.derby.jdbc.ClientDriver";
-    private static final String DB_CONNECTION = "jdbc:derby://localhost:1527/ProvaUtenti";
+    private static final String DB_CONNECTION = "jdbc:derby://localhost:1527/ProvaUtenti;restoreFrom=backups/";
     
     // Inizializzazione delle variabili usate per connettersi al DB
     private PreparedStatement preparedStatement = null;
@@ -60,7 +60,7 @@ public class DBManager {
             preparedStatement = dbConnection.prepareStatement(insertUtenteSQL);
             
             // Inserisco gli argomenti della funzione al posto dei ? 
-            preparedStatement.setInt(1,0);
+            preparedStatement.setInt(1,1);
             preparedStatement.setString(2,email);
             preparedStatement.setString(3,password);
             preparedStatement.setDouble(4,0);

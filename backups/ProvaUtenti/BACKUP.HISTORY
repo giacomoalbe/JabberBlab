@@ -1,0 +1,10 @@
+Fri Jun 12 10:13:52 CEST 2015:Backup avviato per il database situato in /Users/giacomo/.netbeans-derby/ProvaUtenti a /Users/giacomo/NetBeansProject/JabberBlab2/backups/ProvaUtenti.
+Fri Jun 12 10:13:52 CEST 2015:Backup del segmento di dati a /Users/giacomo/NetBeansProject/JabberBlab2/backups/ProvaUtenti/seg0 completato. 
+Fri Jun 12 10:13:52 CEST 2015:Directory di log copiata da /Users/giacomo/.netbeans-derby/ProvaUtenti/log a /Users/giacomo/NetBeansProject/JabberBlab2/backups/ProvaUtenti/log
+Fri Jun 12 10:13:52 CEST 2015:Backup completato, classe instant di log su (1,440472) 
+
+Fri Jun 12 10:15:04 CEST 2015:Backup avviato per il database situato in /Users/giacomo/.netbeans-derby/ProvaUtenti a /Users/giacomo/NetBeansProjects/JabberBlab2/backups/ProvaUtenti.
+Fri Jun 12 10:15:04 CEST 2015:Backup del segmento di dati a /Users/giacomo/NetBeansProjects/JabberBlab2/backups/ProvaUtenti/seg0 completato. 
+Fri Jun 12 10:15:04 CEST 2015:Directory di log copiata da /Users/giacomo/.netbeans-derby/ProvaUtenti/log a /Users/giacomo/NetBeansProjects/JabberBlab2/backups/ProvaUtenti/log
+Fri Jun 12 10:15:04 CEST 2015:Backup completato, classe instant di log su (1,440688) 
+

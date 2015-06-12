@@ -35,7 +35,6 @@ public class AddUserServlet extends HttpServlet {
                 System.out.println("Errore in ServletAddUser: " + e.toString());
             }
             
-            response.sendRedirect(password);
         }
     }
 
