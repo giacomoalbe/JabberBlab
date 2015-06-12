@@ -8,7 +8,10 @@ package servlet;
 import db.DBManager;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -29,12 +32,26 @@ public class AddUserServlet extends HttpServlet {
             // Ora lo inserisco in un database
             
             DBManager manager = new DBManager();
+            
+            Connection conn = manager.getConnection();
+            out.println("Abbiamo creato un DBManager e funziona!" + conn);
+            
             try {
+            if (conn!=null) {
+                conn.close();
+            }
+            } catch (SQLException e) {
+                
+            }
+            
+            manager.closeDB();
+            /*try {
                 manager.addUser(username, password);
             } catch (SQLException e) {
                 System.out.println("Errore in ServletAddUser: " + e.toString());
-            }
-            
+            }*/
+        } catch (SQLException ex) {
+            Logger.getLogger(AddUserServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 

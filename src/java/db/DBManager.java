@@ -12,23 +12,25 @@ public class DBManager {
     private PrintWriter out;
     
     // Dati relativi alla connessione al DB
-    private static final String DB_DRIVER = "org.apache.derby.jdbc.ClientDriver";
-    private static final String DB_CONNECTION = "jdbc:derby://localhost:1527/ProvaUtenti;restoreFrom=backups/";
+    private static final String DB_NAME = "JabberBlabDB";
+    private static final String DB_BACKUP = "backups/JabberBlabDB";
+    private static final String DB_DRIVER = "org.apache.derby.jdbc.EmbeddedDriver";
+    private static final String DB_CONNECTION = "jdbc:derby:"
+            + DB_NAME;
     
     // Inizializzazione delle variabili usate per connettersi al DB
     private PreparedStatement preparedStatement = null;
     
     public DBManager() {
     }
-    
-    private static Connection getConnection() {
+    public Connection getConnection() {
        
         Connection dbConnectionLocal = null;
         
         try {
            Class.forName(DB_DRIVER);
        } catch (ClassNotFoundException e) {
-           System.out.println("Errore: "+ e.toString());
+           System.out.println("Errore: " + e.toString());
        }
       
        try {
@@ -86,4 +88,11 @@ public class DBManager {
             }
         }
     }
+    
+    public void closeDB() throws SQLException {
+        // Usato per chiudere la connessione al DB! Altrimenti da errore!
+        // In quanto stiamo usando il DB da due diversi thread contemporaneamente
+        DriverManager.getConnection("jdbc:derby:ProvaUtenti;shutdown=true");
+    }
+  
 }
