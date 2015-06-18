@@ -83,7 +83,7 @@ public class DBManager {
     
     public void addUser(String username, String email, String password) throws SQLException {
         
-        out.println("Arrivato db manager " + username + " " + email + "\n");
+        out.println("Arrivato db manager " + " " + username + " " + email + "\n");
         
         out.println("Arrivato in mezzo perché non so \n");
         
