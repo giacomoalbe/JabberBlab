@@ -8,10 +8,6 @@
         <servlet-name>ShowUser</servlet-name>
         <servlet-class>servlet.ShowUser</servlet-class>
     </servlet>
-    <servlet>
-        <servlet-name>DBManagerSF</servlet-name>
-        <servlet-class>db.DBManagerSF</servlet-class>
-    </servlet>
     <servlet-mapping>
         <servlet-name>AddUserServlet</servlet-name>
         <url-pattern>/AddUserServlet</url-pattern>
@@ -19,10 +15,6 @@
     <servlet-mapping>
         <servlet-name>ShowUser</servlet-name>
         <url-pattern>/ShowUser</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>DBManagerSF</servlet-name>
-        <url-pattern>/DBManagerSF</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
