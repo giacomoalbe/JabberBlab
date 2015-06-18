@@ -6,6 +6,7 @@
 package servlet;
 
 import db.DBManager;
+import db.DBManagerSF;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
@@ -34,7 +35,7 @@ public class AddUserServlet extends HttpServlet {
            
             out.println("Arrivato nella servlet\n");
             
-            DBManager manager = new DBManager();
+            DBManagerSF manager = new DBManagerSF();
             
             Connection conn = manager.getConnection();
             out.println("Arrivato dopo la connessione\n");
