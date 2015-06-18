@@ -36,7 +36,7 @@
             <h3>Form Registrazione</h3>
             
             Nome utente: </br>
-            <input type="text" name="nome_utente"> </br>
+            <input type="text" name="username"> </br>
             Email: </br>
             <input type="email" name="email"></br>
             Password </br>

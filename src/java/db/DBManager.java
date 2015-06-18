@@ -23,7 +23,7 @@ public class DBManager {
     private static final String DB_NAME = "JabberBlabDBInterno";
     private static final String DB_BACKUP = "backups/JabberBlabDB";
     //private static final String DB_DRIVER = "org.apache.derby.jdbc.EmbeddedDriver";
-    private static final String DB_DRIVER = "org.apache.derby.jdbc.EmbeddedDriver";
+    private static final String DB_DRIVER = "org.apache.derby.jdbc.ClientDriver";
     private static final String DB_CONNECTION = "jdbc:derby:" + DB_PATH + DB_NAME;
     
     // Inizializzazione delle variabili usate per connettersi al DB
@@ -53,9 +53,9 @@ public class DBManager {
        return dbConnectionLocal;
     }
     
-    public void addUser(String email, String password) throws SQLException {
+    public void addUser(String username, String email, String password) throws SQLException {
         
-        out.println("Arrivato db manager");
+        out.println("Arrivato db manager" + username + " " + email + "\n");
         
         // Creo una dbConnection per prelevare i dati
         Connection dbConnection = null;
@@ -64,7 +64,7 @@ public class DBManager {
                                  " (ID_UTENTE, EMAIL, PASSWORD, CREDITO, ID_RUOLO)" +
                                  " VALUES (?,?,?,?,?)";
         
-        out.println("Arrivato prima del prepareStatement");
+        out.println("Arrivato prima del prepareStatement \n");
         
         try {
             // Popolo la dbConnection
@@ -79,6 +79,8 @@ public class DBManager {
             preparedStatement.setString(3,password);
             preparedStatement.setDouble(4,0);
             preparedStatement.setInt(5,1);
+            preparedStatement.setString(6,username);
+            
             
             // Eseguo la query associata al SQL
             preparedStatement.executeUpdate();

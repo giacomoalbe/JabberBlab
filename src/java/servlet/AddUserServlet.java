@@ -27,18 +27,20 @@ public class AddUserServlet extends HttpServlet {
         
         try (PrintWriter out = response.getWriter()) {
             String username = request.getParameter("username");
+            String email = request.getParameter("email");
             String password = request.getParameter("password");
             
             // Ora lo inserisco in un database
            
-            out.println("Arrivato nella servlet");
+            out.println("Arrivato nella servlet \n");
             
             DBManager manager = new DBManager();
             
             Connection conn = manager.getConnection();
-            out.println("Arrivato dopo la connessione");
-            manager.addUser(username, password);
-            out.println("Abbiamo creato un DBManager e funziona!" + conn);
+            out.println("Arrivato dopo la connessione \n");
+            out.println("Arrivato db manager" + username + " " + email + " \n");
+            manager.addUser(username, email, password);
+            out.println("Abbiamo creato un DBManager e funziona!" + conn + " \n");
             
             
             try {
