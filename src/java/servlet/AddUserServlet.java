@@ -32,15 +32,15 @@ public class AddUserServlet extends HttpServlet {
             
             // Ora lo inserisco in un database
            
-            out.println("Arrivato nella servlet \n");
+            out.println("Arrivato nella servlet\n");
             
             DBManager manager = new DBManager();
             
             Connection conn = manager.getConnection();
-            out.println("Arrivato dopo la connessione \n");
-            out.println("Arrivato db manager" + username + " " + email + " \n");
+            out.println("Arrivato dopo la connessione\n");
+            out.println("Arrivato db manager" + username + " " + email + "\n");
             manager.addUser(username, email, password);
-            out.println("Abbiamo creato un DBManager e funziona!" + conn + " \n");
+            out.println("Abbiamo creato un DBManager e funziona!" + conn + "\n");
             
             
             try {
