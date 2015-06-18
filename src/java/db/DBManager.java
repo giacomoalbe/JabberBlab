@@ -11,9 +11,15 @@ public class DBManager {
     // Printer used for printing on the web page
     private PrintWriter out;
     
+    /*
+    
+    Class.forName("org.apache.derby.jdbc.EmbeddedDriver");
+    Connection con = DriverManager.getConnection("jdbc:derby://localhost:1527/TodoDB", "testuser", "testpassword");
+    
+    */
     // Dati relativi alla connessione al DB
     //private static final String DB_PATH = "/Users/giacomo/NetBeansProjects/JabberBlab2/";
-    private static final String DB_PATH = "localhost:1527/";
+    private static final String DB_PATH = "//localhost:1527/";
     private static final String DB_NAME = "JabberBlabDBInterno";
     private static final String DB_BACKUP = "backups/JabberBlabDB";
     //private static final String DB_DRIVER = "org.apache.derby.jdbc.EmbeddedDriver";
