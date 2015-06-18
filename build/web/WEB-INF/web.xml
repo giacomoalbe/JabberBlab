@@ -4,9 +4,17 @@
         <servlet-name>AddUserServlet</servlet-name>
         <servlet-class>servlet.AddUserServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ShowUser</servlet-name>
+        <servlet-class>servlet.ShowUser</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>AddUserServlet</servlet-name>
         <url-pattern>/AddUserServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ShowUser</servlet-name>
+        <url-pattern>/ShowUser</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

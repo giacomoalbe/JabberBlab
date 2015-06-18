@@ -13,3 +13,10 @@ Fri Jun 12 16:36:54 CEST 2015:Backup del segmento di dati a /Users/giacomo/NetBe
 Fri Jun 12 16:36:54 CEST 2015:Directory di log copiata da /Users/giacomo/NetBeansProjects/JabberBlab2/JabberBlabDB/log a /Users/giacomo/NetBeansProjects/JabberBlab2/backups/JabberBlabDB/log
 Fri Jun 12 16:36:54 CEST 2015:Backup completato, classe instant di log su (2,843) 
 
+Thu Jun 18 13:33:42 CEST 2015:Backup avviato per il database situato in /Users/apple/GitHub/JabberBlab/JabberBlabDB a /Users/apple/GitHub/JabberBlab/backups/JabberBlabDB.
+Thu Jun 18 13:33:42 CEST 2015:Vecchia copia di backup spostata da /Users/apple/GitHub/JabberBlab/backups/JabberBlabDB a /Users/apple/GitHub/JabberBlab/backups/JabberBlabDB.OLD
+Thu Jun 18 13:33:42 CEST 2015:Backup del segmento di dati a /Users/apple/GitHub/JabberBlab/backups/JabberBlabDB/seg0 completato. 
+Thu Jun 18 13:33:42 CEST 2015:Directory di log copiata da /Users/apple/GitHub/JabberBlab/JabberBlabDB/log a /Users/apple/GitHub/JabberBlab/backups/JabberBlabDB/log
+Thu Jun 18 13:33:42 CEST 2015:Vecchia copia di backup eliminata in /Users/apple/GitHub/JabberBlab/backups/JabberBlabDB.OLD
+Thu Jun 18 13:33:42 CEST 2015:Backup completato, classe instant di log su (3,2127) 
+

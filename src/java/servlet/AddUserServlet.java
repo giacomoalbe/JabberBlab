@@ -30,15 +30,20 @@ public class AddUserServlet extends HttpServlet {
             String password = request.getParameter("password");
             
             // Ora lo inserisco in un database
+           
+            out.println("Arrivato nella servlet");
             
             DBManager manager = new DBManager();
             
             Connection conn = manager.getConnection();
+            out.println("Arrivato dopo la connessione");
+            manager.addUser(username, password);
             out.println("Abbiamo creato un DBManager e funziona!" + conn);
             
-            manager.addUser(username, password);
+            
             try {
             if (conn!=null) {
+                out.println("connessione chiusa");
                 conn.close();
             }
             } catch (SQLException e) {

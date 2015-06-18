@@ -13,7 +13,7 @@ public class DBManager {
     
     // Dati relativi alla connessione al DB
     //private static final String DB_PATH = "/Users/giacomo/NetBeansProjects/JabberBlab2/";
-    private static final String DB_PATH = "/JabberBlabDBInterno/";
+    private static final String DB_PATH = "localhost:1527/";
     private static final String DB_NAME = "JabberBlabDBInterno";
     private static final String DB_BACKUP = "backups/JabberBlabDB";
     //private static final String DB_DRIVER = "org.apache.derby.jdbc.EmbeddedDriver";
@@ -49,12 +49,16 @@ public class DBManager {
     
     public void addUser(String email, String password) throws SQLException {
         
+        out.println("Arrivato db manager");
+        
         // Creo una dbConnection per prelevare i dati
         Connection dbConnection = null;
         
         String insertUtenteSQL = "INSERT INTO Utente" +
                                  " (ID_UTENTE, EMAIL, PASSWORD, CREDITO, ID_RUOLO)" +
                                  " VALUES (?,?,?,?,?)";
+        
+        out.println("Arrivato prima del prepareStatement");
         
         try {
             // Popolo la dbConnection
