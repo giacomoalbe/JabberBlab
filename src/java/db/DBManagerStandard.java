@@ -45,6 +45,7 @@ public class DBManagerStandard implements Serializable {
      * Autentica un utente in base a un nome utente e a una password
      * 
      * @param username il nome utente
+     * @param email è l'email dell'utente
      * @param password la password
      * @return null se l'utente non è autenticato, un oggetto User se l'utente esiste ed è autenticato
      */
@@ -52,6 +53,8 @@ public class DBManagerStandard implements Serializable {
     public void addUser(String username, String email, String password) throws SQLException {
         // usare SEMPRE i PreparedStatement, anche per query banali. 
         // *** MAI E POI MAI COSTRUIRE LE QUERY CONCATENANDO STRINGHE !!!! ***
+        
+        out.println("Arrivato nell'adduser del dbmanagerstandard\n");
 
         String insertUtenteSQL = "INSERT INTO Utente" +
                                  " (ID_UTENTE, EMAIL, PASSWORD, CREDITO, ID_RUOLO, USERNAME)" +

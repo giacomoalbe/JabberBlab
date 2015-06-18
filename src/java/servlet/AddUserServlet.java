@@ -40,6 +40,7 @@ public class AddUserServlet extends HttpServlet {
             //Connection conn = manager.getConnection();
             out.println("Arrivato dopo la connessione\n");
             manager.addUser(username, email, password);
+            
             out.println("Abbiamo creato un DBManager e funziona!\n");
             
             
