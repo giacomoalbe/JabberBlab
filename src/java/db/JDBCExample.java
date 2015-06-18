@@ -15,25 +15,30 @@ public class JDBCExample {
 
     }
    // JDBC driver name and database URL
-   static final String JDBC_DRIVER = "org.apache.derby.jdbc.EmbeddedDriver";  
+   static final String JDBC_DRIVER = "org.apache.derby.jdbc.ClientDriver";  
    static final String DB_URL = "jdbc:derby://localhost:1527/JabberBlabDBInterno";
 
    //  Database credentials
    static final String USER = "";
    static final String PASS = "";
+   static int hitId = 0;
    
    public String addUser(String username, String email, String password) throws SQLException {
    Connection conn = null;
    Statement stmt = null;
    String returnmessage = null;
+   
+ 
    try{
       //STEP 2: Register JDBC driver
-      Class.forName("org.apache.derby.jdbc.EmbeddedDriver");
+      Class.forName("org.apache.derby.jdbc.ClientDriver");
 
       //STEP 3: Open a connection
       System.out.println("Connecting to a selected database...");
       conn = DriverManager.getConnection(DB_URL, USER, PASS);
       System.out.println("Connected database successfully...");
+      
+      System.out.println("Sto registrando " + username + " " + email + " ");
       
       //STEP 4: Execute a query
       System.out.println("Inserting records into the table...");
@@ -54,7 +59,7 @@ public class JDBCExample {
             
             out.println("Arrivato che prepara lo statement \n");
             // Inserisco gli argomenti della funzione al posto dei ? 
-            stm.setInt(1,1);
+            stm.setInt(1,++hitId);
             stm.setString(2,email);
             stm.setString(3,password);
             stm.setDouble(4,0);
@@ -64,7 +69,8 @@ public class JDBCExample {
             stm.executeUpdate();
       System.out.println("Inserted records into the table...");
       
-     returnmessage = "Ho registrato " + username + " " + email + " ";
+     
+     
       
       
 
@@ -74,7 +80,8 @@ public class JDBCExample {
    }}catch(Exception e){
       //Handle errors for Class.forName
       e.printStackTrace();
-   }finally{
+   }
+   finally{
       //finally block used to close resources
       try{
          if(stmt!=null)
@@ -88,7 +95,8 @@ public class JDBCExample {
          se.printStackTrace();
       }//end finally try
    }//end try
+   returnmessage = "Ho registrato con successo " + username + "con l'email " + email; 
    System.out.println("Goodbye!");
         return returnmessage;
-}//end main
+    }//end addUser
 }//end JDBCExample

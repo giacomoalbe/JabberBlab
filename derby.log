@@ -1,7 +1,7 @@
-Thu Jun 18 22:54:39 CEST 2015 : Server di rete Apache Derby: 10.10.2.0 - (1582446) avviato e pronto ad accettare connessioni sulla porta 1527
+Thu Jun 18 23:31:31 CEST 2015 : Server di rete Apache Derby: 10.10.2.0 - (1582446) avviato e pronto ad accettare connessioni sulla porta 1527
 ----------------------------------------------------------------
-Thu Jun 18 23:08:35 CEST 2015:
-Avvio della versione di Derby The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): istanza a816c00e-014e-0873-bc10-0000763a7c10
+Fri Jun 19 00:41:57 CEST 2015:
+Avvio della versione di Derby The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): istanza a816c00e-014e-0895-7ae9-0000763a7c10
 sulla directory di database /Users/apple/GitHub/JabberBlab/JabberBlabDBInterno con caricatore classi sun.misc.Launcher$AppClassLoader@5a07e868 
 Caricato da file:/Applications/NetBeans/glassfish-4.1/javadb/lib/derby.jar
 java.vendor=Oracle Corporation
