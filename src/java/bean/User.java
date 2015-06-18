@@ -15,6 +15,7 @@ public class User implements Serializable{
     private String email;
     private String password;
     private double credito;
+    private String username;
     private int id_ruolo;
 
     /**
@@ -85,5 +86,19 @@ public class User implements Serializable{
      */
     public void setId_ruolo(int id_ruolo) {
         this.id_ruolo = id_ruolo;
+    }
+
+    /**
+     * @return the username
+     */
+    public String getUsername() {
+        return username;
+    }
+
+    /**
+     * @param username the username to set
+     */
+    public void setUsername(String username) {
+        this.username = username;
     }
 }

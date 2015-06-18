@@ -23,7 +23,7 @@ public class DBManager {
     private static final String DB_NAME = "JabberBlabDBInterno";
     private static final String DB_BACKUP = "backups/JabberBlabDB";
     //private static final String DB_DRIVER = "org.apache.derby.jdbc.EmbeddedDriver";
-    private static final String DB_DRIVER = "org.apache.derby.jdbc.ClientDriver";
+    private static final String DB_DRIVER = "org.apache.derby.jdbc.EmbeddedDriver";
     private static final String DB_CONNECTION = "jdbc:derby:" + DB_PATH + DB_NAME;
     
     // Inizializzazione delle variabili usate per connettersi al DB

@@ -16,7 +16,10 @@
     <center>
         <h1>Ciao ciccio, dai loggati</h1>
         <div class="container_log">
-        <form action="servlet" method="POST" name="LoginServlet">
+            
+            <h3>Form Login</h3>
+            
+        <form action="" method="POST" name="log_form">
             Nome utente: </br>
             <input type="text" name="nome_utente"> </br>
             Email: </br>
@@ -28,7 +31,10 @@
         </div>
         
           <div class="container_reg">
-        <form action="servlet" method="POST" name="DBManager">
+        <form action="AddUserServlet" method="POST" name="reg_form">
+            
+            <h3>Form Registrazione</h3>
+            
             Nome utente: </br>
             <input type="text" name="nome_utente"> </br>
             Email: </br>
