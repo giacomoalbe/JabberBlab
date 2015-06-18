@@ -19,6 +19,14 @@ import java.util.logging.Logger;
  */
 public class DBManagerStandard implements Serializable {
     // transient == non viene serializzato
+    
+    private static final String DB_PATH = "//localhost:1527/";
+    private static final String DB_NAME = "JabberBlabDBInterno";
+    private static final String DB_BACKUP = "backups/JabberBlabDB";
+    //private static final String DB_DRIVER = "org.apache.derby.jdbc.EmbeddedDriver";
+    private static final String DB_DRIVER = "org.apache.derby.jdbc.ClientDriver";
+    private static final String DB_CONNECTION = "jdbc:derby:" + DB_PATH + DB_NAME;
+    
 
     private transient Connection con;
     
@@ -26,19 +34,28 @@ public class DBManagerStandard implements Serializable {
     
     public DBManagerStandard () throws SQLException {
 
-        String dburl = "jdbc:derby://localhost:1527/JabberBlabDBInterno";
+    }
+    
+    public Connection getConnection() {
+       
+        Connection dbConnectionLocal = null;
         
         try {
-            
-            Class.forName("org.apache.derby.jdbc.ClientDriver", true, getClass().getClassLoader());
-
-        } catch(Exception e) {
-            throw new RuntimeException(e.toString(), e);
-        }
-        
-        Connection con = DriverManager.getConnection(dburl);
-        this.con = con;
-
+           Class.forName(DB_DRIVER);
+       } catch (ClassNotFoundException e) {
+           System.out.println("Errore: " + e.toString());
+       }
+     
+       try {
+           //Cerco di creare la connessione al DB
+           dbConnectionLocal = DriverManager.getConnection(DB_CONNECTION);
+           return dbConnectionLocal;
+           
+       } catch (SQLException e) {
+           System.out.println("Errore in GetConnection(): " + e.toString());
+       }
+       
+       return dbConnectionLocal;
     }
     
     /**
@@ -53,8 +70,10 @@ public class DBManagerStandard implements Serializable {
     public void addUser(String username, String email, String password) throws SQLException {
         // usare SEMPRE i PreparedStatement, anche per query banali. 
         // *** MAI E POI MAI COSTRUIRE LE QUERY CONCATENANDO STRINGHE !!!! ***
-        
         out.println("Arrivato nell'adduser del dbmanagerstandard\n");
+        
+        Connection con = getConnection();
+        out.println("Preparata la connessione\n");
 
         String insertUtenteSQL = "INSERT INTO Utente" +
                                  " (ID_UTENTE, EMAIL, PASSWORD, CREDITO, ID_RUOLO, USERNAME)" +
