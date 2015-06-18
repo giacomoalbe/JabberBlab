@@ -1,3 +1,5 @@
+package db;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -8,6 +10,10 @@ import static java.lang.System.out;
 import java.sql.*;
 
 public class JDBCExample {
+    
+    public JDBCExample () {
+
+    }
    // JDBC driver name and database URL
    static final String JDBC_DRIVER = "org.apache.derby.jdbc.EmbeddedDriver";  
    static final String DB_URL = "jdbc:derby://localhost:1527/JabberBlabDBInterno";
@@ -16,9 +22,10 @@ public class JDBCExample {
    static final String USER = "";
    static final String PASS = "";
    
-   public void addUser(String username, String email, String password) throws SQLException {
+   public String addUser(String username, String email, String password) throws SQLException {
    Connection conn = null;
    Statement stmt = null;
+   String returnmessage = null;
    try{
       //STEP 2: Register JDBC driver
       Class.forName("org.apache.derby.jdbc.EmbeddedDriver");
@@ -56,7 +63,10 @@ public class JDBCExample {
             
             stm.executeUpdate();
       System.out.println("Inserted records into the table...");
-        
+      
+     returnmessage = "Ho registrato " + username + " " + email + " ";
+      
+      
 
    }catch(SQLException se){
       //Handle errors for JDBC
@@ -79,5 +89,6 @@ public class JDBCExample {
       }//end finally try
    }//end try
    System.out.println("Goodbye!");
+        return returnmessage;
 }//end main
 }//end JDBCExample

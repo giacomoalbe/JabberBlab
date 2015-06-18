@@ -38,12 +38,13 @@ public class AddUserServlet extends HttpServlet {
             
             //DBManagerStandard manager = new DBManagerStandard();
             
-            JDBCExample manager = new JDBCExample;
+            JDBCExample manager = new JDBCExample();
             
             //Connection conn = manager.getConnection();
             out.println("Arrivato dopo la connessione\n");
-            manager.addUser(username, email, password);
-            
+            String vediamo = null;
+            vediamo = manager.addUser(username, email, password);
+            out.println(vediamo);
             out.println("Abbiamo creato un DBManager e funziona!\n");
             
             
