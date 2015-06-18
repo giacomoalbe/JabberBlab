@@ -85,6 +85,8 @@ public class DBManager {
         
         out.println("Arrivato db manager " + username + " " + email + "\n");
         
+        out.println("Arrivato in mezzo perché non so \n");
+        
         // Creo una dbConnection per prelevare i dati
         
         
