@@ -5,11 +5,13 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.Properties;
 
 public class DBManager {
     
     // Printer used for printing on the web page
     private PrintWriter out;
+    
     
     /*
     
@@ -42,7 +44,7 @@ public class DBManager {
        } catch (ClassNotFoundException e) {
            System.out.println("Errore: " + e.toString());
        }
-      
+     
        try {
            //Cerco di creare la connessione al DB
            dbConnectionLocal = DriverManager.getConnection(DB_CONNECTION);
@@ -54,27 +56,54 @@ public class DBManager {
        
        return dbConnectionLocal;
     }
+
+    /*
+    public Connection getConnectionDynimic() throws SQLException{
+     
+    Connection conndync = null;
+    
+    if (this.dbms.equals("mysql")) {
+        conn = DriverManager.getConnection(
+                   "jdbc:" + this.dbms + "://" +
+                   this.serverName +
+                   ":" + this.portNumber + "/",
+                   connectionProps);
+    } else if (this.dbms.equals("derby")) {
+        conn = DriverManager.getConnection(
+                   "jdbc:" + this.dbms + ":" +
+                   this.dbName +
+                   ";create=true",
+                   connectionProps);
+    }
+    System.out.println("Connected to database");
+    return conndync;
+}
+       
+    */
     
     public void addUser(String username, String email, String password) throws SQLException {
         
-        out.println("Arrivato db manager" + username + " " + email + "\n");
+        out.println("Arrivato db manager " + username + " " + email + "\n");
         
         // Creo una dbConnection per prelevare i dati
-        Connection dbConnection = null;
+        
+        
+        out.println("Arrivato in mezzo perché non so \n");
         
         String insertUtenteSQL = "INSERT INTO Utente" +
-                                 " (ID_UTENTE, EMAIL, PASSWORD, CREDITO, ID_RUOLO)" +
-                                 " VALUES (?,?,?,?,?)";
+                                 " (ID_UTENTE, EMAIL, PASSWORD, CREDITO, ID_RUOLO, USERNAME)" +
+                                 " VALUES (?,?,?,?,?,?)";
         
         out.println("Arrivato prima del prepareStatement \n");
         
         try {
             // Popolo la dbConnection
+            Connection dbConnection = null;
             dbConnection = getConnection();
-            
+             out.println("Arrivato dopo la connessione \n");
             // Preparo la query da mandare al DB
             preparedStatement = dbConnection.prepareStatement(insertUtenteSQL);
-            
+            out.println("Arrivato che prepara lo statement \n");
             // Inserisco gli argomenti della funzione al posto dei ? 
             preparedStatement.setInt(1,++hitId);
             preparedStatement.setString(2,email);
@@ -89,6 +118,10 @@ public class DBManager {
             
             System.out.println("Utente inserito con successo!");
             
+            if (dbConnection != null) {
+                dbConnection.close();
+            }
+            
         } catch (SQLException e) {
             System.out.println("Errore in addUser: " + e.toString());
         } finally {
@@ -98,10 +131,10 @@ public class DBManager {
             if (preparedStatement != null) {
                 preparedStatement.close();
             }
-            
+            /*
             if (dbConnection != null) {
                 dbConnection.close();
-            }
+            }*/
         }
     }
   
