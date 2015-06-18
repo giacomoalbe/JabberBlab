@@ -1,13 +1,14 @@
 package db;
 
 import java.io.PrintWriter;
+import java.io.Serializable;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.Properties;
 
-public class DBManager {
+public class DBManager implements Serializable{
     
     // Printer used for printing on the web page
     private PrintWriter out;
@@ -97,11 +98,11 @@ public class DBManager {
                                  " VALUES (?,?,?,?,?,?)";
         
         out.println("Arrivato prima del prepareStatement \n");
-        
+        Connection dbConnection = null;
+            dbConnection = getConnection();
         try {
             // Popolo la dbConnection
-            Connection dbConnection = null;
-            dbConnection = getConnection();
+            
              out.println("Arrivato dopo la connessione \n");
             // Preparo la query da mandare al DB
             preparedStatement = dbConnection.prepareStatement(insertUtenteSQL);
@@ -120,9 +121,7 @@ public class DBManager {
             
             System.out.println("Utente inserito con successo!");
             
-            if (dbConnection != null) {
-                dbConnection.close();
-            }
+          
             
         } catch (SQLException e) {
             System.out.println("Errore in addUser: " + e.toString());
@@ -133,10 +132,10 @@ public class DBManager {
             if (preparedStatement != null) {
                 preparedStatement.close();
             }
-            /*
+            
             if (dbConnection != null) {
                 dbConnection.close();
-            }*/
+            }
         }
     }
   

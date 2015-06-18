@@ -4,9 +4,9 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/Users/apple/GitHub/JabberBlab/src/java/db/DBManager.java</file>
-            <file>file:/Users/apple/GitHub/JabberBlab/web/index.html</file>
+            <file>file:/Users/apple/GitHub/JabberBlab/src/java/db/DBManagerStandard.java</file>
             <file>file:/Users/apple/GitHub/JabberBlab/src/java/servlet/AddUserServlet.java</file>
-            <file>file:/Users/apple/GitHub/JabberBlab/src/java/dbUtils/RestoreDatabase.java</file>
+            <file>file:/Users/apple/GitHub/JabberBlab/web/login.jsp</file>
         </group>
     </open-files>
 </project-private>

@@ -6,6 +6,7 @@
 package servlet;
 
 import db.DBManager;
+import db.DBManagerStandard;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
@@ -34,23 +35,22 @@ public class AddUserServlet extends HttpServlet {
            
             out.println("Arrivato nella servlet\n");
             
-            DBManager manager = new DBManager();
+            DBManagerStandard manager = new DBManagerStandard();
             
-            Connection conn = manager.getConnection();
+            //Connection conn = manager.getConnection();
             out.println("Arrivato dopo la connessione\n");
-            out.println("Arrivato db manager" + username + " " + email + "\n");
             manager.addUser(username, email, password);
-            out.println("Abbiamo creato un DBManager e funziona!" + conn + "\n");
+            out.println("Abbiamo creato un DBManager e funziona!\n");
             
             
-            try {
+            /*try {
             if (conn!=null) {
                 out.println("connessione chiusa");
                 conn.close();
             }
             } catch (SQLException e) {
                 System.out.println("Chiusura della connessione in Servlet");
-            }
+            }*/
             
             /*try {
                 manager.addUser(username, password);
