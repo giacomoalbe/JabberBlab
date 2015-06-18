@@ -6,8 +6,11 @@ package db;
  * and open the template in the editor.
  */
 //STEP 1. Import required packages
+import bean.User;
 import static java.lang.System.out;
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class JDBCExample {
     
@@ -95,8 +98,47 @@ public class JDBCExample {
          se.printStackTrace();
       }//end finally try
    }//end try
-   returnmessage = "Ho registrato con successo " + username + "con l'email " + email; 
+   returnmessage = "Ho registrato con successo " + username + " con l'email " + email + "<br>"; 
    System.out.println("Goodbye!");
         return returnmessage;
     }//end addUser
+   
+   
+  
+        /**
+     * Ottiene la lista dei prodotti dal DB
+     * 
+     * @return
+     * @throws SQLException 
+     */
+
+    public List<User> getUtente() throws SQLException {
+        List<User> esseriumani = new ArrayList<User>();
+        Connection con = null;
+        
+        PreparedStatement stm = con.prepareStatement("SELECT * FROM UTENTE");
+        try {
+            ResultSet rs = stm.executeQuery();
+            try {
+                
+                while(rs.next()) {
+                    User p = new User();
+                    
+                    p.setId_utente(rs.getInt("id_utente"));
+                    p.setUsername(rs.getString("username"));
+                    p.setEmail(rs.getString("email"));
+                    p.setPassword(rs.getString("password"));
+
+                    esseriumani.add(p);
+                }
+                
+            } finally {
+                rs.close();
+            }
+        } finally {
+            stm.close();
+        }
+        
+        return esseriumani;
+    }
 }//end JDBCExample

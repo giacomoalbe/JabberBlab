@@ -5,6 +5,7 @@
  */
 package servlet;
 
+import bean.User;
 import db.DBManager;
 import db.DBManagerStandard;
 import db.JDBCExample;
@@ -12,6 +13,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.ServletException;
@@ -34,21 +37,37 @@ public class AddUserServlet extends HttpServlet {
             
             // Ora lo inserisco in un database
            
-            out.println("Arrivato nella servlet\n");
+            out.println("Arrivato nella servlet <br>");
             
             //DBManagerStandard manager = new DBManagerStandard();
             
             JDBCExample manager = new JDBCExample();
             
             //Connection conn = manager.getConnection();
-            out.println("Arrivato dopo la connessione\n");
+            out.println("Arrivato dopo la connessione <br>");
             String vediamo = null;
             
-            out.println("registro" + username + " ");
+            out.println("registro " + username + "<br>");
             
             vediamo = manager.addUser(username, email, password);
             out.println(vediamo);
-            out.println("Abbiamo creato un DBManager e funziona!\n");
+            
+            List<User> UtentiNow = manager.getUtente();
+            
+            for ( int i = UtentiNow.size() ; i >= 0 ; i-- )
+            {
+            User s = UtentiNow.get(i) ;
+            System.out.println( "Utente " + i + " is " + s + " <br>" ) ;
+            }
+            
+            if(UtentiNow.isEmpty()){
+                out.println("la lista vuota <br>");
+            }else{
+            out.println("non è vuota e ovviamente te li ho fatti vedere, no? <br>");
+            }
+            
+            
+            out.println("Abbiamo creato un DBManager e funziona! <br>");
             
             
             /*try {
