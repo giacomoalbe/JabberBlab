@@ -37,30 +37,28 @@ public class JDBCExample {
       Class.forName("org.apache.derby.jdbc.ClientDriver");
 
       //STEP 3: Open a connection
-      System.out.println("Connecting to a selected database...");
-      conn = DriverManager.getConnection(DB_URL, USER, PASS);
-      System.out.println("Connected database successfully...");
+      returnmessage = returnmessage + ("Connecting to a selected database... <br>");
+      conn = DriverManager.getConnection(DB_URL);
+      returnmessage = returnmessage +("Connected database successfully...<br>");
       
-      System.out.println("Sto registrando " + username + " " + email + " ");
+      returnmessage = returnmessage +("Sto registrando " + username + " " + email + "<br> ");
       
       //STEP 4: Execute a query
-      System.out.println("Inserting records into the table...");
+      returnmessage = returnmessage +("Inserting records into the table...<br>");
       stmt = conn.createStatement();
       
-      String insertUtenteSQL = "INSERT INTO Utente" +
-                                 " (ID_UTENTE, EMAIL, PASSWORD, CREDITO, ID_RUOLO, USERNAME)" +
-                                 " VALUES (?,?,?,?,?,?)";
+      String insertUtenteSQL = "INSERT INTO Utente (ID_UTENTE, EMAIL, PASSWORD, CREDITO, ID_RUOLO, USERNAME) VALUES (?,?,?,?,?,?)";
         
-        out.println("Arrivato prima del prepareStatement \n");
+        returnmessage = returnmessage +("Arrivato prima del prepareStatement <br>");
         PreparedStatement stm = conn.prepareStatement(insertUtenteSQL);
         try {
             // Popolo la dbConnection
               
             
-             out.println("Arrivato dopo la connessione \n");
+             returnmessage = returnmessage +("Arrivato dopo la connessione <br>");
             // Preparo la query da mandare al DB
             
-            out.println("Arrivato che prepara lo statement \n");
+            returnmessage = returnmessage +("Arrivato che prepara lo statement <br>");
             // Inserisco gli argomenti della funzione al posto dei ? 
             stm.setInt(1,++hitId);
             stm.setString(2,email);
@@ -70,7 +68,7 @@ public class JDBCExample {
             stm.setString(6,username);
             
             stm.executeUpdate();
-      System.out.println("Inserted records into the table...");
+      returnmessage = returnmessage +("Inserted records into the table...<br>");
       
      
      
@@ -98,7 +96,7 @@ public class JDBCExample {
          se.printStackTrace();
       }//end finally try
    }//end try
-   returnmessage = "Ho registrato con successo " + username + " con l'email " + email + "<br>"; 
+   returnmessage = returnmessage + "Ho registrato con successo " + username + " con l'email " + email + "<br>"; 
    System.out.println("Goodbye!");
         return returnmessage;
     }//end addUser
@@ -114,9 +112,12 @@ public class JDBCExample {
 
     public List<User> getUtente() throws SQLException {
         List<User> esseriumani = new ArrayList<User>();
-        Connection con = null;
         
-        PreparedStatement stm = con.prepareStatement("SELECT * FROM UTENTE");
+        Connection con = DriverManager.getConnection(DB_URL);
+        
+        PreparedStatement stm = con.prepareStatement("SELECT * FROM Utente");
+      
+    
         try {
             ResultSet rs = stm.executeQuery();
             try {
