@@ -7,7 +7,6 @@ package servlet;
 
 import bean.User;
 import db.DBManager;
-import db.DBManagerStandard;
 import db.JDBCExample;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -26,7 +25,7 @@ public class AddUserServlet extends HttpServlet {
 
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException, SQLException {
+            throws ServletException, IOException, SQLException, Exception {
         
         response.setContentType("text/html;charset=UTF-8");
         
@@ -41,15 +40,15 @@ public class AddUserServlet extends HttpServlet {
             
             //DBManagerStandard manager = new DBManagerStandard();
             
-            JDBCExample manager = new JDBCExample();
+            DBManager manager = new DBManager();
             
             //Connection conn = manager.getConnection();
             out.println("Arrivato dopo la connessione <br>");
-            String vediamo = null;
+          
             
-            out.println("registro " + username + "<br>");
+            out.println("inizio a registrare " + username + "<br>");
             
-            vediamo = manager.addUser(username, email, password);
+            String vediamo = manager.addUser(username, email, password);
             out.println(vediamo);
             
             List<User> UtentiNow = manager.getUtente();
@@ -57,7 +56,7 @@ public class AddUserServlet extends HttpServlet {
             for ( int i = UtentiNow.size() ; i >= 0 ; i-- )
             {
             User s = UtentiNow.get(i) ;
-            System.out.println( "Utente " + i + " is " + s + " <br>" ) ;
+            out.println(UtentiNow.get(i).printUser());
             }
             
             if(UtentiNow.isEmpty()){
@@ -67,7 +66,7 @@ public class AddUserServlet extends HttpServlet {
             }
             
             
-            out.println("Abbiamo creato un DBManager e funziona! <br>");
+            out.println("CE L'ABBIAMO FATTA PORCA MISERIA!!! <br>");
             
             
             /*try {
@@ -103,6 +102,8 @@ public class AddUserServlet extends HttpServlet {
             processRequest(request, response);
         } catch (SQLException ex) {
             Logger.getLogger(AddUserServlet.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (Exception ex) {
+            Logger.getLogger(AddUserServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -120,6 +121,8 @@ public class AddUserServlet extends HttpServlet {
         try {
             processRequest(request, response);
         } catch (SQLException ex) {
+            Logger.getLogger(AddUserServlet.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (Exception ex) {
             Logger.getLogger(AddUserServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
     }

@@ -17,6 +17,15 @@ public class User implements Serializable{
     private double credito;
     private String username;
     private int id_ruolo;
+    
+     public User(){}
+     
+     public String printUser(){
+         String pUser = "<br> ------------- <br> UTENTE <br> ------------- <br>";
+         pUser += "id: " + id_utente + " email: " + email + " password: " + password + " credito: " + credito + " username: " + username + "<br>"; 
+         pUser += "<br> ------------- <br>";
+         return pUser;
+     }
 
     /**
      * @return the id_utente
