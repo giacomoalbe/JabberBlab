@@ -126,6 +126,8 @@ public class DBManager implements Serializable{
           con.close();
     }
     
+    
+    
     public String addUser(String username, String email, String password) throws SQLException {
         
         String returnmessage = null;
