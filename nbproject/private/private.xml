@@ -2,12 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/Users/apple/GitHub/JabberBlab/src/java/db/DBManager.java</file>
-            <file>file:/Users/apple/GitHub/JabberBlab/src/java/bean/User.java</file>
-            <file>file:/Users/apple/GitHub/JabberBlab/src/java/db/JDBCExample.java</file>
-            <file>file:/Users/apple/GitHub/JabberBlab/src/java/servlet/AddUserServlet.java</file>
-            <file>file:/Users/apple/GitHub/JabberBlab/web/login.jsp</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
