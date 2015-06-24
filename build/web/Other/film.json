@@ -7,7 +7,6 @@
     "durata" : 143,
     "trama" : "Bond's loyalty to M is tested when her past comesback to haunt her. Whilst MI6 comes under attack, 007 must track down and destroy the threat, no matter how personal the cost." ,
     "uri_locandina" : "img_loc/01_Skyfall.jpg"
-    
     },
     {   
     "id_film" : 2 ,
@@ -215,5 +214,5 @@
     "durata" : 90,
     "trama" : "In the wake of the tragic loss of her mother in a rogue bombing, a young Iraqi girl escapes her War-Torn village and makes her way to the U.S., on the coattails of two American Journalists where together they search for her dad, whom she's never met and who she only knows as; John Smith from Iowa.",
     "uri_locandina" : "img_loc/24_findingjohnsmith.jpg"
-    }    
+    }
 ]
