@@ -1,0 +1,219 @@
+[
+    {
+    "id_film" : 1 ,
+    "titolo": "Skyfall" ,
+    "id_genere" : 16 ,
+    "url_trailer" : "https://www.youtube.com/watch?v=OnlSRBTG5Tw" ,
+    "durata" : 143,
+    "trama" : "Bond's loyalty to M is tested when her past comesback to haunt her. Whilst MI6 comes under attack, 007 must track down and destroy the threat, no matter how personal the cost." ,
+    "uri_locandina" : "img_loc/01_Skyfall.jpg"
+    
+    },
+    {   
+    "id_film" : 2 ,
+    "titolo": "Man of Tai Chi" ,
+    "id_genere" : 16 ,
+    "url_trailer" : "https://www.youtube.com/watch?v=HIKQCZDYfEI" ,
+    "durata" : 105,
+    "trama" : "A young martial artist's unparalleled Tai Chi skills land him in a highly lucrative underworld fight club." ,
+    "uri_locandina" : "img_loc/02_manoftaichi.jpg"
+    },
+    {   
+    "id_film" : 3 ,
+    "titolo": "Heroine" ,
+    "id_genere" : 6 ,
+    "url_trailer" : "https://www.youtube.com/watch?v=ZWB_h91HqP0" ,
+    "durata" : 150,
+    "trama" : "A female superstar struggles through the trials and tribulations of being a Bollywood actress." ,
+    "uri_locandina" : "img_loc/03_heroine.jpg"
+    },
+    {   
+    "id_film" : 4 ,
+    "titolo": "Last Survivor" ,
+    "id_genere" : 16 ,
+    "url_trailer" : "https://www.youtube.com/watch?v=A0t2xJS-Z7o" ,
+    "durata" : 95,
+    "trama" : "A teenage girl fights to protect the last working well in a drought-stricken valley from a greedy water baron." ,
+    "uri_locandina" : "img_loc/04_lastsurvivor.jpg"
+    },
+    {   
+    "id_film" : 5 ,
+    "titolo": "The Avengers" ,
+    "id_genere" : 16 ,
+    "url_trailer" : "https://www.youtube.com/watch?v=21-RSDPmLjg" ,
+    "durata" : 143,
+    "trama" : "Earth's mightiest heroes must come together and learn to fight as a team if they are to stop the mischievous Loki and his alien army from enslaving humanity." ,
+    "uri_locandina" : "img_loc/05_avengers.jpg"
+    },
+    {   
+    "id_film" : 6 ,
+    "titolo": "Hotel Transylvania " ,
+    "id_genere" : 1 ,
+    "url_trailer" : "https://www.youtube.com/watch?v=3I65KApkpPk" ,
+    "durata" : 91,
+    "trama" : "Dracula, who operates a high-end resort away from the human world, goes into overprotective mode when a boy discovers the resort and falls for the count's teen-aged daughter." ,
+    "uri_locandina" : "img_loc/06_hoteltransylvania"
+    },
+    {   
+    "id_film" : 7 ,
+    "titolo": "Indipendence Day" ,
+    "id_genere" : 9 ,
+    "url_trailer" : "https://www.youtube.com/watch?v=kA2WzBi2grE" ,
+    "durata" : 145,
+    "trama" : "The aliens are coming and their goal is to invade and destroy Earth. Fighting superior technology, mankind's best weapon is the will to survive." ,
+    "uri_locandina" : "img_loc/07_indipendenceday.jpg"
+    },
+    {   
+    "id_film" : 8 ,
+    "titolo": "Pink Panther" ,
+    "id_genere" : 9 ,
+    "url_trailer" : "https://www.youtube.com/watch?v=HokdJyD605U" ,
+    "durata" : 93,
+    "trama" : "Bumbling Inspector Clouseau must solve the murder of a famous soccer coach and find out who stole the infamous Pink Panther diamond." ,
+    "uri_locandina" : "img_loc/08_pinkpanther.jpg"
+    },
+    {   
+    "id_film" : 9 ,
+    "titolo": "Wolverine" ,
+    "id_genere" : 16 ,
+    "url_trailer" : "https://www.youtube.com/watch?v=_MeSpeoVELI" ,
+    "durata" : 126,
+    "trama" : "When Wolverine is summoned to Japan by an old acquaintance, he is embroiled in a conflict that forces him to confront his own demons." ,
+    "uri_locandina" : "img_loc/09_wolverine.jpg"
+    },
+    {   
+    "id_film" : 10 ,
+    "titolo": "Remember Sunday" ,
+    "id_genere" : 6 ,
+    "url_trailer" : "https://www.youtube.com/watch?v=nGsUt_kG87A" ,
+    "durata" : 96,
+    "trama" : "A lonely waitress meets a handsome, quirky jewelry store clerk who had a brain aneurysm and thus has short-term memory loss." ,
+    "uri_locandina" : "img_loc/10_remembersunday.jpg"
+    },
+    {   
+    "id_film" : 11 ,
+    "titolo": "Eat" ,
+    "id_genere" : 11 ,
+    "url_trailer" : "https://www.youtube.com/watch?v=cp-MO_m0Io8" ,
+    "durata" : 92,
+    "trama" : "Novella McClure is like most struggling actresses in Los Angeles: she's in her early 30s, her fake name sounded cooler ten years ago, and she hasn't landed a role in three years. To top it all off, she's developed a disturbing habit of eating her own flesh. Novella desperately tries to hide her strange condition from her motherly landlord, Eesha, and somewhat psychopathic best friend, Candice, but her body and mind continue to deteriorate in the depressing world of failed auditions and sketchy night clubs. Can a romantic relationship with her psychiatrist prevent her from self destruction? Or will her fatal habit continue to eat away at her?" ,
+    "uri_locandina" : "img_loc/11_eat.jpg"
+    },
+    {   
+    "id_film" : 12 ,
+    "titolo": "Finding Nemo" ,
+    "id_genere" : 1 ,
+    "url_trailer" : "https://www.youtube.com/watch?v=hKFKDwE73FI" ,
+    "durata" : 100,
+    "trama" : "After his son is captured in the Great Barrier Reef and taken to Sydney, a timid clownfish sets out on a journey to bring him home.",
+    "uri_locandina" : "img_loc/12_nemo.jpg"
+    },
+    {   
+    "id_film" : 13 ,
+    "titolo": "Young Ones" ,
+    "id_genere" : 6 ,
+    "url_trailer" : "https://www.youtube.com/watch?v=mH9_tU5PbGs" ,
+    "durata" : 100,
+    "trama" : "Set in the future when water is hard to find, a teenage boy sets out to protect his family and survive.",
+    "uri_locandina" : "img_loc/13_youngones.jpg"
+    },
+    {   
+    "id_film" : 14 ,
+    "titolo": "The Wind Rises" ,
+    "id_genere" : 1 ,
+    "url_trailer" : "https://www.youtube.com/watch?v=xKafVzROOWc" ,
+    "durata" : 126,
+    "trama" : "A look at the life of Jiro Horikoshi, the man who designed Japanese fighter planes during World War II.",
+    "uri_locandina" : "img_loc/14_sialzailvento.jpg"
+    },
+    {   
+    "id_film" : 15 ,
+    "titolo": "B. Monkey" ,
+    "id_genere" : 14 ,
+    "url_trailer" : "https://www.youtube.com/watch?v=SLfl0RiOvEM" ,
+    "durata" : 92,
+    "trama" : "A young woman attempts to end her criminal career. But she needs love to make it.",
+    "uri_locandina" : "img_loc/15_b.monkey.jpg"
+    },
+    {   
+    "id_film" : 16 ,
+    "titolo": "Fakeh" ,
+    "id_genere" : 5 ,
+    "url_trailer" : "https://www.youtube.com/watch?v=scVT9jHxaYQ" ,
+    "durata" : 92,
+    "trama" : "The Short film Fakeh is among other things, a humanitarian cry on behalf of the girl child to stop infant marriages and put everyone on the same scale, giving them the opportunity to dream",
+    "uri_locandina" : "img_loc/16_fakeh.jpg"
+    },
+    {   
+    "id_film" : 17 ,
+    "titolo": "The Cove" ,
+    "id_genere" : 5 ,
+    "url_trailer" : "https://www.youtube.com/watch?v=4KRD8e20fBo" ,
+    "durata" : 90,
+    "trama" : "Using state-of-the-art equipment, a group of activists, led by renowned dolphin trainer Ric O'Barry, infiltrate a cove near Taijii, Japan to expose both a shocking instance of animal abuse and a serious threat to human health.",
+    "uri_locandina" : "img_loc/17_thecove.jpg"
+    },
+    {   
+    "id_film" : 18 ,
+    "titolo": "The Croods" ,
+    "id_genere" : 1 ,
+    "url_trailer" : "https://www.youtube.com/watch?v=hJkcwLTVotU" ,
+    "durata" : 98,
+    "trama" : "After their cave is destroyed, a caveman family must trek through an unfamiliar fantastical world with the help of an inventive boy.",
+    "uri_locandina" : "img_loc/18_thecroods.jpg"
+    },
+    {   
+    "id_film" : 19 ,
+    "titolo": "100 Volte Natale" ,
+    "id_genere" : 4 ,
+    "url_trailer" : "https://www.youtube.com/watch?v=e3FxpsF6pdc" ,
+    "durata" : 86,
+    "trama" : "A put-upon teen finds himself reliving the same miserable Christmas day over and over again.",
+    "uri_locandina" : "img_loc/19_100voltenatale.jpg"
+    },
+    {   
+    "id_film" : 20 ,
+    "titolo": "The A Team" ,
+    "id_genere" : 16 ,
+    "url_trailer" : "https://www.youtube.com/watch?v=P_E9zOIcKCU" ,
+    "durata" : 117,
+    "trama" : "A group of Iraq War veterans looks to clear their name with the U.S. military, who suspect the four men of committing a crime for which they were framed.",
+    "uri_locandina" : "img_loc/20_theateam.jpg"
+    },
+    {   
+    "id_film" : 21 ,
+    "titolo": "John Carter" ,
+    "id_genere" : 2 ,
+    "url_trailer" : "https://www.youtube.com/watch?v=SoatAvuTz5g" ,
+    "durata" : 132,
+    "trama" : "Transported to Barsoom, a Civil War vet discovers a barren planet seemingly inhabited by 12-foot tall barbarians. Finding himself prisoner of these creatures, he escapes, only to encounter Woola and a princess in desperate need of a savior.",
+    "uri_locandina" : "img_loc/21_johncarter.jpg"
+    },
+    {   
+    "id_film" : 22 ,
+    "titolo": "Casinò" ,
+    "id_genere" : 3 ,
+    "url_trailer" : "https://www.youtube.com/watch?v=mMws-yxXWmg" ,
+    "durata" : 178,
+    "trama" : "Greed, deception, money, power, and murder occur between two mobster best friends and a trophy wife over a gambling empire.",
+    "uri_locandina" : "img_loc/22_casino.jpg"
+    },
+    {   
+    "id_film" : 23 ,
+    "titolo": "Casinò" ,
+    "id_genere" : 6 ,
+    "url_trailer" : "https://www.youtube.com/watch?v=T9P3XXvleo4" ,
+    "durata" : 144,
+    "trama" : "Two young men, one rich, one middle class, who are in love with the same woman, become fighter pilots in World War I.",
+    "uri_locandina" : "img_loc/23_wings.jpg"
+    },
+    {   
+    "id_film" : 24 ,
+    "titolo": "Finding John Smith" ,
+    "id_genere" : 6 ,
+    "url_trailer" : "https://www.youtube.com/watch?v=sggdngML4Z8" ,
+    "durata" : 90,
+    "trama" : "In the wake of the tragic loss of her mother in a rogue bombing, a young Iraqi girl escapes her War-Torn village and makes her way to the U.S., on the coattails of two American Journalists where together they search for her dad, whom she's never met and who she only knows as; John Smith from Iowa.",
+    "uri_locandina" : "img_loc/24_findingjohnsmith.jpg"
+    }    
+]

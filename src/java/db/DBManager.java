@@ -75,41 +75,24 @@ public class DBManager implements Serializable{
        return dbConnectionLocal;
     }
 
-    /*
-    public Connection getConnectionDynimic() throws SQLException{
-     
-    Connection conndync = null;
-    
-    if (this.dbms.equals("mysql")) {
-        conn = DriverManager.getConnection(
-                   "jdbc:" + this.dbms + "://" +
-                   this.serverName +
-                   ":" + this.portNumber + "/",
-                   connectionProps);
-    } else if (this.dbms.equals("derby")) {
-        conn = DriverManager.getConnection(
-                   "jdbc:" + this.dbms + ":" +
-                   this.dbName +
-                   ";create=true",
-                   connectionProps);
-    }
-    System.out.println("Connected to database");
-    return conndync;
-}
-       
-    */
-    
     public void controlID() throws SQLException{
         
         con = getConnection();
         //controlID = con.prepareStatement("SELECT LAST (id_utente) FROM Utente");
         
         String qid = "SELECT MAX(id_utente) FROM Utente";
-        //String qid = "SELECT * FROM Utente";
+     
         PreparedStatement stm = con.prepareStatement(qid); 
-        //controlID = con.prepareStatement("SELECT TOP 1 id_utente FROM Utente ORDER BY id_utente DESC");
-        ResultSet lastId = stm.executeQuery();
-        int last =  ((Number) lastId.getObject(1)).intValue();
+        ResultSet rs = stm.executeQuery();
+
+              //int last = rs.getInt("id_utente");
+              
+              
+              String str = rs.getString("id_utente");
+              int last = Integer.parseInt(str);
+              //Integer last = (Integer) rs.getObject("id_utente");
+               
+
         if(last == hitId){
         ++hitId;
         }
@@ -136,7 +119,7 @@ public class DBManager implements Serializable{
         
         returnmessage += "Arrivato db manager " + " " + username + " " + email + "<br>";
         
-        //controlID();
+        controlID();
         
         String insertUtenteSQL = "INSERT INTO Utente" +
                                  " (ID_UTENTE, EMAIL, PASSWORD, CREDITO, ID_RUOLO, USERNAME)" +
