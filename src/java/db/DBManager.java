@@ -8,9 +8,16 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
+import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 import java.util.Properties;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import static javafx.application.Platform.exit;
 
 public class DBManager implements Serializable{
@@ -19,21 +26,6 @@ public class DBManager implements Serializable{
     private PrintWriter out;
     
     
-    /*
-    
-    Class.forName("org.apache.derby.jdbc.EmbeddedDriver");
-    Connection con = DriverManager.getConnection("jdbc:derby://localhost:1527/TodoDB", "testuser", "testpassword");
-    
-    */
-    // Dati relativi alla connessione al DB
-    //private static final String DB_PATH = "/Users/giacomo/NetBeansProjects/JabberBlab2/";
-    /*private static final String DB_PATH = "//localhost:1527/";
-    private static final String DB_NAME = "JabberBlabDBInterno";
-    private static final String DB_BACKUP = "backups/JabberBlabDB";
-    //private static final String DB_DRIVER = "org.apache.derby.jdbc.EmbeddedDriver";
-    private static final String DB_DRIVER = "org.apache.derby.jdbc.ClientDriver";
-    private static final String DB_CONNECTION = "jdbc:derby:" + DB_PATH + DB_NAME;
-    */
     
    static final String JDBC_DRIVER = "org.apache.derby.jdbc.ClientDriver";  
    static final String DB_URL = "jdbc:derby://localhost:1527/JabberBlabDBInterno";
@@ -42,7 +34,7 @@ public class DBManager implements Serializable{
    static final String USER = "";
    static final String PASS = "";
    static int hitId = 0;
-   private transient Connection con;
+   private static transient Connection con;
     
    
     
@@ -53,7 +45,7 @@ public class DBManager implements Serializable{
     public DBManager() {
     }
     
-    public Connection getConnection() {
+    public static Connection getConnection() {
        
         Connection dbConnectionLocal = null;
         
@@ -119,7 +111,7 @@ public class DBManager implements Serializable{
         
         returnmessage += "Arrivato db manager " + " " + username + " " + email + "<br>";
         
-        controlID();
+        //controlID();
         
         String insertUtenteSQL = "INSERT INTO Utente" +
                                  " (ID_UTENTE, EMAIL, PASSWORD, CREDITO, ID_RUOLO, USERNAME)" +
@@ -197,5 +189,127 @@ public class DBManager implements Serializable{
           con.close();
         return esseriumani;
     }
+    
+    
+    
+    
+    public static void CreaSpettacolo(PrintWriter out) throws SQLException{
+        java.util.Date now = new java.util.Date();
+        
+        final int INTERVALLO_SPETTACOLI = 3;
+        final int SPETTACOLI_PER_FILM = 5;
+        
+        Connection dbConnection = getConnection();
+        
+        // Data che inseriamo al momento della prima run del programma
+        Date oraInUnCertoMomento = new Date();
+        Calendar cursoreOra = Calendar.getInstance();
+        cursoreOra.setTime(oraInUnCertoMomento);
+        
+        String querySelectAllFilm = "SELECT * FROM FILM";
+        Statement stm = dbConnection.createStatement();
+        
+        ResultSet recordSetAllFilm = stm.executeQuery(querySelectAllFilm);
+        int j = 1;
+        while (recordSetAllFilm.next()) {
+            out.println(j + " " + recordSetAllFilm.getString("titolo") + "<br>");
+            j++;
+ 
+            // Creiamo 5 spettacoli per ogni fil
+            for (int i = 0; i < SPETTACOLI_PER_FILM; i++) {
+                
+                creaNuovoSpettacoloFilm(recordSetAllFilm.getInt("id_film"), cursoreOra.getTime(), out);
+                out.println(cursoreOra.getTime());
+                cursoreOra.add(Calendar.MINUTE, INTERVALLO_SPETTACOLI);
+            }
+            
+        }
+    
+        
+        
+        
+        
+    
+        
+        
+        
+       
+            
+         
+    }
+    
+    public static void creaNuovoSpettacoloFilm(int id_film, Date orario, PrintWriter out) throws SQLException {
+        
+        // Ritorna il numero della prima sala libera in quel momento.
+        // Se non trova nessuna sala ritorna -1
+        
+        // Cerchiamo dunque tra tutti gli spettacoli se è presente una riga 
+        // con ora == orario e sala == sala
+        /*con = getConnection();
+        
+        java.sql.Time sqlTime = new java.sql.Time(orario.getTime());
+        
+        
+        
+        java.sql.Date sqlDate = new java.sql.Date(orario.getTime());
+        out.println(sqlDate.toString() + sqlTime.toString());
+        String querySelectSalaOrario = "SELECT id_spettacolo FROM spettacolo WHERE id_sala = ? AND data_ora = '" + new Timestamp(orario.getTime()) + "'";
+        
+        out.println(querySelectSalaOrario);
+        
+        PreparedStatement stm = con.prepareStatement(querySelectSalaOrario);
+        
+        stm.setInt(1, sala);
+        //stm.setDate(2, (java.sql.Date) orario);
+        
+        out.println(stm.toString());
+        
+        ResultSet resultSetSalaOrario = stm.executeQuery();
+        
+        if (isEmpty(resultSetSalaOrario)) {
+            // Inseriamo lo spettacolo nella tabella a questo orario e sala
+        } else {
+            // Non inseriamo l'orario in tabella
+        }
+        
+
+        */
+        
+        
+        
+        out.println(" ora: " + orario.toString()+ "<br>");
+        
+         Connection dbConnection = getConnection();
+         Statement pstm = dbConnection.createStatement();
+         String insertUtenteSQL = "INSERT INTO Spettacolo" +
+                                 " (ID_SPETTACOLO, ID_FILM, DATA_ORA, ID_SALA)" +
+                                 " VALUES (?,?,?,?)";
+         
+         pstm = dbConnection.prepareStatement(insertUtenteSQL);
+         
+            
+            pstm.setInt(1,);
+            pstm.setString(2,email);
+            pstm.setString(3,password);
+            pstm.setDouble(4,0);
+      
+        
+         
+    }
+    
+    public static boolean isEmpty(ResultSet rs) {
+        try {
+            if (rs.getRow() != 0) {
+                return false;
+            } else {
+                return true;
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(DBManager.class.getName()).log(Level.SEVERE, null, ex);
+            return  true;
+        }
+    }
+    
+    
   
 }

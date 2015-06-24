@@ -6,7 +6,7 @@
     "url_trailer" : "https://www.youtube.com/watch?v=OnlSRBTG5Tw" ,
     "durata" : 143,
     "trama" : "Bond's loyalty to M is tested when her past comesback to haunt her. Whilst MI6 comes under attack, 007 must track down and destroy the threat, no matter how personal the cost." ,
-    "uri_locandina" : "img_loc/01_Skyfall.jpg"
+    "uri_locandina" : "img_loc/01_skyfall.jpg"
     
     },
     {   
@@ -47,7 +47,7 @@
     },
     {   
     "id_film" : 6 ,
-    "titolo": "Hotel Transylvania " ,
+    "titolo": "Hotel Transylvania" ,
     "id_genere" : 1 ,
     "url_trailer" : "https://www.youtube.com/watch?v=3I65KApkpPk" ,
     "durata" : 91,
@@ -200,7 +200,7 @@
     },
     {   
     "id_film" : 23 ,
-    "titolo": "Casinò" ,
+    "titolo": "Wings" ,
     "id_genere" : 6 ,
     "url_trailer" : "https://www.youtube.com/watch?v=T9P3XXvleo4" ,
     "durata" : 144,
