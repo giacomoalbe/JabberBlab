@@ -3,8 +3,9 @@ package org.apache.jsp;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
+import java.io.PrintWriter;
 
-public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class form_005ffilm_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -48,43 +49,20 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<html>\n");
       out.write("    <head>\n");
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
-      out.write("        <link href=\"style.css\" rel=\"stylesheet\">\n");
-      out.write("        <title>JSP Page</title>\n");
+      out.write("        <title>Informazioni sui Film e Spettacoli</title>\n");
       out.write("    </head>\n");
       out.write("    <body>\n");
-      out.write("    <center>\n");
-      out.write("        <h1>Ciao ciccio, dai loggati</h1>\n");
-      out.write("        <div class=\"container_log\">\n");
-      out.write("            \n");
-      out.write("            <h3>Form Login</h3>\n");
-      out.write("            \n");
-      out.write("        <form action=\"\" method=\"POST\" name=\"log_form\">\n");
-      out.write("            Nome utente: </br>\n");
-      out.write("            <input type=\"text\" name=\"username\"> </br>\n");
-      out.write("            Email: </br>\n");
-      out.write("            <input type=\"email\" name=\"email\"></br>\n");
-      out.write("            Password </br>\n");
-      out.write("            <input type=\"password\" name=\"password\"></br>\n");
-      out.write("            <input type=\"submit\" value=\"Submit\"></br>\n");
+      out.write("        ");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${culo}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("\n");
+      out.write("        ");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${account}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write("\n");
+      out.write("        <form action = \"TestServlet\" method= \"POST\">\n");
+      out.write("            <select name = \"film\"></select>\n");
+      out.write("            <select name = \"sala\"></select>\n");
+      out.write("            <select name = \"ora\"></select>\n");
       out.write("        </form>\n");
-      out.write("        </div>\n");
-      out.write("        \n");
-      out.write("          <div class=\"container_reg\">\n");
-      out.write("        <form action=\"AddUserServlet\" method=\"POST\" name=\"reg_form\">\n");
-      out.write("            \n");
-      out.write("            <h3>Form Registrazione</h3>\n");
-      out.write("            \n");
-      out.write("            Nome utente: </br>\n");
-      out.write("            <input type=\"text\" name=\"username\"> </br>\n");
-      out.write("            Email: </br>\n");
-      out.write("            <input type=\"email\" name=\"email\"></br>\n");
-      out.write("            Password </br>\n");
-      out.write("            <input type=\"password\" name=\"password\"></br>\n");
-      out.write("            <input type=\"submit\" value=\"Submit\"></br>\n");
-      out.write("        </form>\n");
-      out.write("        </div>\n");
-      out.write("        <a href=\"loggati.jsp\">Vedi i loggati</a>\n");
-      out.write("    </center>\n");
       out.write("    </body>\n");
       out.write("</html>\n");
     } catch (Throwable t) {
