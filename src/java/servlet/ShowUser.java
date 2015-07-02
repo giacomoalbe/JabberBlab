@@ -5,6 +5,7 @@
  */
 package servlet;
 
+import bean.User;
 import db.DBManager;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -14,6 +15,7 @@ import static java.lang.System.out;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import java.sql.*;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.ServletException;
@@ -38,46 +40,70 @@ public class ShowUser extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, SQLException {
+        
+        
         response.setContentType("text/html;charset=UTF-8");
         
-        DBManager manager = new DBManager();
-            
-        Connection conn = manager.getConnection();
-        
-        Statement stmt = conn.createStatement();
-        ResultSet rs = stmt.executeQuery("select * from user");
-        
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet ShowUser</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet ShowUser at " + request.getContextPath() + "</h1>");
-            
-            
-            
-             out.println("<table border=1 width=50% height=50%>");
-             out.println("<tr><th>EmpId</th><th>EmpName</th><th>Salary</th><tr>");
-             while (rs.next()) {
-                 String n = rs.getString("username");
-                 String nm = rs.getString("email");
-                 int s = rs.getInt("id_utente"); 
-                 out.println("<tr><td>" + n + "</td><td>" + nm + "</td><td>" + s + "</td></tr>"); 
-             }
-             out.println("</table>");
-             out.println("</html></body>");
-             conn.close();
-            }
-             catch (Exception e) {
-             out.println("error");
-         }
-     }
+     
+    try (PrintWriter out = response.getWriter()) {
+        String returnUserServlet = ShowUserTable();
+        out.println(returnUserServlet);
+    }
+       
+    
+    }
  
             
+     public String ShowUser() throws SQLException{
+            
+        
+            DBManager manager = new DBManager();
+            String userReturn = null;
+            List<User> UtentiNow = manager.getUtente();
+          
+            int i = 0;
+            while(i<UtentiNow.size())
+            {
+            User s = UtentiNow.get(i);
+            userReturn += "Utente " + i + " : " + UtentiNow.get(i).printUser();
+            i++;
+            }
+            out.println(userReturn);
+            if(UtentiNow.isEmpty()){
+                out.println("la lista vuota <br>");
+            }else{
+            out.println("non è vuota e ovviamente te li ho fatti vedere, no? <br>");
+            }
+            
+            
+            
+            return userReturn;
+     }
      
+     public String ShowUserTable() throws SQLException{
+            
+        
+            DBManager manager = new DBManager();
+            String userReturn = "";
+            List<User> UtentiNow = manager.getUtente();
+            userReturn += "<table name='usertable' border = '1px solid'>";
+            int i = 0;
+            while(i<UtentiNow.size())
+            {
+            User s = UtentiNow.get(i);
+            userReturn +=UtentiNow.get(i).printUserTable();
+            i++;
+            }
+            userReturn += "</table>";
+            out.println(userReturn);
+            if(UtentiNow.isEmpty()){
+                out.println("la lista vuota <br>");
+            }else{
+            out.println("non è vuota e ovviamente te li ho fatti vedere, no? <br>");
+            }
+
+            return userReturn;
+     }
         
     
 

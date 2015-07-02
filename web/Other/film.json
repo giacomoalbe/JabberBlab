@@ -1,16 +1,15 @@
-[
+{ "films" : [
     {
-    "id_film" : 1 ,
+    "id_film" : 0 ,
     "titolo": "Skyfall" ,
     "id_genere" : 16 ,
     "url_trailer" : "https://www.youtube.com/watch?v=OnlSRBTG5Tw" ,
     "durata" : 143,
     "trama" : "Bond's loyalty to M is tested when her past comesback to haunt her. Whilst MI6 comes under attack, 007 must track down and destroy the threat, no matter how personal the cost." ,
     "uri_locandina" : "img_loc/01_skyfall.jpg"
-    
     },
     {   
-    "id_film" : 2 ,
+    "id_film" : 1 ,
     "titolo": "Man of Tai Chi" ,
     "id_genere" : 16 ,
     "url_trailer" : "https://www.youtube.com/watch?v=HIKQCZDYfEI" ,
@@ -19,7 +18,7 @@
     "uri_locandina" : "img_loc/02_manoftaichi.jpg"
     },
     {   
-    "id_film" : 3 ,
+    "id_film" : 2 ,
     "titolo": "Heroine" ,
     "id_genere" : 6 ,
     "url_trailer" : "https://www.youtube.com/watch?v=ZWB_h91HqP0" ,
@@ -28,7 +27,7 @@
     "uri_locandina" : "img_loc/03_heroine.jpg"
     },
     {   
-    "id_film" : 4 ,
+    "id_film" : 3 ,
     "titolo": "Last Survivor" ,
     "id_genere" : 16 ,
     "url_trailer" : "https://www.youtube.com/watch?v=A0t2xJS-Z7o" ,
@@ -37,7 +36,7 @@
     "uri_locandina" : "img_loc/04_lastsurvivor.jpg"
     },
     {   
-    "id_film" : 5 ,
+    "id_film" : 4 ,
     "titolo": "The Avengers" ,
     "id_genere" : 16 ,
     "url_trailer" : "https://www.youtube.com/watch?v=21-RSDPmLjg" ,
@@ -46,16 +45,16 @@
     "uri_locandina" : "img_loc/05_avengers.jpg"
     },
     {   
-    "id_film" : 6 ,
+    "id_film" : 5 ,
     "titolo": "Hotel Transylvania" ,
     "id_genere" : 1 ,
     "url_trailer" : "https://www.youtube.com/watch?v=3I65KApkpPk" ,
     "durata" : 91,
     "trama" : "Dracula, who operates a high-end resort away from the human world, goes into overprotective mode when a boy discovers the resort and falls for the count's teen-aged daughter." ,
-    "uri_locandina" : "img_loc/06_hoteltransylvania"
+    "uri_locandina" : "img_loc/06_hoteltransylvanie.jpg"
     },
     {   
-    "id_film" : 7 ,
+    "id_film" : 6 ,
     "titolo": "Indipendence Day" ,
     "id_genere" : 9 ,
     "url_trailer" : "https://www.youtube.com/watch?v=kA2WzBi2grE" ,
@@ -64,16 +63,16 @@
     "uri_locandina" : "img_loc/07_indipendenceday.jpg"
     },
     {   
-    "id_film" : 8 ,
+    "id_film" : 7 ,
     "titolo": "Pink Panther" ,
     "id_genere" : 9 ,
     "url_trailer" : "https://www.youtube.com/watch?v=HokdJyD605U" ,
     "durata" : 93,
     "trama" : "Bumbling Inspector Clouseau must solve the murder of a famous soccer coach and find out who stole the infamous Pink Panther diamond." ,
-    "uri_locandina" : "img_loc/08_pinkpanther.jpg"
+    "uri_locandina" : "img_loc/08_pinkpanther.jpeg"
     },
     {   
-    "id_film" : 9 ,
+    "id_film" : 8 ,
     "titolo": "Wolverine" ,
     "id_genere" : 16 ,
     "url_trailer" : "https://www.youtube.com/watch?v=_MeSpeoVELI" ,
@@ -82,7 +81,7 @@
     "uri_locandina" : "img_loc/09_wolverine.jpg"
     },
     {   
-    "id_film" : 10 ,
+    "id_film" : 9 ,
     "titolo": "Remember Sunday" ,
     "id_genere" : 6 ,
     "url_trailer" : "https://www.youtube.com/watch?v=nGsUt_kG87A" ,
@@ -91,7 +90,7 @@
     "uri_locandina" : "img_loc/10_remembersunday.jpg"
     },
     {   
-    "id_film" : 11 ,
+    "id_film" : 10 ,
     "titolo": "Eat" ,
     "id_genere" : 11 ,
     "url_trailer" : "https://www.youtube.com/watch?v=cp-MO_m0Io8" ,
@@ -100,7 +99,7 @@
     "uri_locandina" : "img_loc/11_eat.jpg"
     },
     {   
-    "id_film" : 12 ,
+    "id_film" : 11 ,
     "titolo": "Finding Nemo" ,
     "id_genere" : 1 ,
     "url_trailer" : "https://www.youtube.com/watch?v=hKFKDwE73FI" ,
@@ -109,7 +108,7 @@
     "uri_locandina" : "img_loc/12_nemo.jpg"
     },
     {   
-    "id_film" : 13 ,
+    "id_film" : 12 ,
     "titolo": "Young Ones" ,
     "id_genere" : 6 ,
     "url_trailer" : "https://www.youtube.com/watch?v=mH9_tU5PbGs" ,
@@ -118,7 +117,7 @@
     "uri_locandina" : "img_loc/13_youngones.jpg"
     },
     {   
-    "id_film" : 14 ,
+    "id_film" : 13 ,
     "titolo": "The Wind Rises" ,
     "id_genere" : 1 ,
     "url_trailer" : "https://www.youtube.com/watch?v=xKafVzROOWc" ,
@@ -127,7 +126,7 @@
     "uri_locandina" : "img_loc/14_sialzailvento.jpg"
     },
     {   
-    "id_film" : 15 ,
+    "id_film" : 14 ,
     "titolo": "B. Monkey" ,
     "id_genere" : 14 ,
     "url_trailer" : "https://www.youtube.com/watch?v=SLfl0RiOvEM" ,
@@ -136,7 +135,7 @@
     "uri_locandina" : "img_loc/15_b.monkey.jpg"
     },
     {   
-    "id_film" : 16 ,
+    "id_film" : 15 ,
     "titolo": "Fakeh" ,
     "id_genere" : 5 ,
     "url_trailer" : "https://www.youtube.com/watch?v=scVT9jHxaYQ" ,
@@ -145,7 +144,7 @@
     "uri_locandina" : "img_loc/16_fakeh.jpg"
     },
     {   
-    "id_film" : 17 ,
+    "id_film" : 16 ,
     "titolo": "The Cove" ,
     "id_genere" : 5 ,
     "url_trailer" : "https://www.youtube.com/watch?v=4KRD8e20fBo" ,
@@ -154,7 +153,7 @@
     "uri_locandina" : "img_loc/17_thecove.jpg"
     },
     {   
-    "id_film" : 18 ,
+    "id_film" : 17 ,
     "titolo": "The Croods" ,
     "id_genere" : 1 ,
     "url_trailer" : "https://www.youtube.com/watch?v=hJkcwLTVotU" ,
@@ -163,7 +162,7 @@
     "uri_locandina" : "img_loc/18_thecroods.jpg"
     },
     {   
-    "id_film" : 19 ,
+    "id_film" : 18 ,
     "titolo": "100 Volte Natale" ,
     "id_genere" : 4 ,
     "url_trailer" : "https://www.youtube.com/watch?v=e3FxpsF6pdc" ,
@@ -172,7 +171,7 @@
     "uri_locandina" : "img_loc/19_100voltenatale.jpg"
     },
     {   
-    "id_film" : 20 ,
+    "id_film" : 19 ,
     "titolo": "The A Team" ,
     "id_genere" : 16 ,
     "url_trailer" : "https://www.youtube.com/watch?v=P_E9zOIcKCU" ,
@@ -181,7 +180,7 @@
     "uri_locandina" : "img_loc/20_theateam.jpg"
     },
     {   
-    "id_film" : 21 ,
+    "id_film" : 20 ,
     "titolo": "John Carter" ,
     "id_genere" : 2 ,
     "url_trailer" : "https://www.youtube.com/watch?v=SoatAvuTz5g" ,
@@ -190,7 +189,7 @@
     "uri_locandina" : "img_loc/21_johncarter.jpg"
     },
     {   
-    "id_film" : 22 ,
+    "id_film" : 21 ,
     "titolo": "Casinò" ,
     "id_genere" : 3 ,
     "url_trailer" : "https://www.youtube.com/watch?v=mMws-yxXWmg" ,
@@ -199,7 +198,7 @@
     "uri_locandina" : "img_loc/22_casino.jpg"
     },
     {   
-    "id_film" : 23 ,
+    "id_film" : 22 ,
     "titolo": "Wings" ,
     "id_genere" : 6 ,
     "url_trailer" : "https://www.youtube.com/watch?v=T9P3XXvleo4" ,
@@ -208,7 +207,7 @@
     "uri_locandina" : "img_loc/23_wings.jpg"
     },
     {   
-    "id_film" : 24 ,
+    "id_film" : 23 ,
     "titolo": "Finding John Smith" ,
     "id_genere" : 6 ,
     "url_trailer" : "https://www.youtube.com/watch?v=sggdngML4Z8" ,
@@ -216,4 +215,4 @@
     "trama" : "In the wake of the tragic loss of her mother in a rogue bombing, a young Iraqi girl escapes her War-Torn village and makes her way to the U.S., on the coattails of two American Journalists where together they search for her dad, whom she's never met and who she only knows as; John Smith from Iowa.",
     "uri_locandina" : "img_loc/24_findingjohnsmith.jpg"
     }    
-]
+]}

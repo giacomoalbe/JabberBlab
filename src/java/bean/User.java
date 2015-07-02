@@ -26,6 +26,14 @@ public class User implements Serializable{
          pUser += "<br> ------------- <br>";
          return pUser;
      }
+     
+     public String printUserTable(){
+         String pUser = "<tr>";
+         pUser += "<td> id: " + id_utente + " </td><td> email: " + email + " </td><td>password: " 
+                 + password + " </td><td>credito: " + credito + " </td><td>username: " + username + "</td>"; 
+         pUser += "</tr>";
+         return pUser;
+     }
 
     /**
      * @return the id_utente

@@ -16,6 +16,14 @@
         <servlet-name>TestServlet</servlet-name>
         <servlet-class>servlet.TestServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ShowFilm</servlet-name>
+        <servlet-class>servlet.ShowFilm</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SendEmail</servlet-name>
+        <servlet-class>servlet.SendEmail</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>AddUserServlet</servlet-name>
         <url-pattern>/AddUserServlet</url-pattern>
@@ -31,6 +39,14 @@
     <servlet-mapping>
         <servlet-name>TestServlet</servlet-name>
         <url-pattern>/TestServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ShowFilm</servlet-name>
+        <url-pattern>/ShowFilm</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SendEmail</servlet-name>
+        <url-pattern>/SendEmail</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

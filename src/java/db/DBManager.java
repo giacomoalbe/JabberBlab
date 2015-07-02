@@ -68,37 +68,30 @@ public class DBManager implements Serializable{
     }
 
     public void controlID() throws SQLException{
-        
-        con = getConnection();
-        //controlID = con.prepareStatement("SELECT LAST (id_utente) FROM Utente");
-        
-        String qid = "SELECT MAX(id_utente) FROM Utente";
+               //FUNZIONANTE! - Brune
+        Connection controlConn = getConnection();
+        String qid = "SELECT MAX (id_utente) AS id_utente FROM Utente";
      
-        PreparedStatement stm = con.prepareStatement(qid); 
+        PreparedStatement stm = controlConn.prepareStatement(qid); 
         ResultSet rs = stm.executeQuery();
-
-              //int last = rs.getInt("id_utente");
-              
-              
-              String str = rs.getString("id_utente");
-              int last = Integer.parseInt(str);
-              //Integer last = (Integer) rs.getObject("id_utente");
-               
-
-        if(last == hitId){
-        ++hitId;
+        int last = 0;
+        
+        while(rs.next()){
+        last = rs.getInt("id_utente");
         }
-        if(last<hitId){
-        hitId = ++last;
+
+        if(last >= hitId){
+        hitId = last + 1;
         }
+        
         else{
         exit();
         }
         if(stm!=null){
            stm.close();
         }
-        if(con!=null)
-          con.close();
+        if(controlConn!=null)
+          controlConn.close();
     }
     
     
@@ -107,18 +100,14 @@ public class DBManager implements Serializable{
         
         String returnmessage = null;
         Connection dbConnection = getConnection();
-   
-        
-        returnmessage += "Arrivato db manager " + " " + username + " " + email + "<br>";
-        
-        //controlID();
+
+        controlID();
         
         String insertUtenteSQL = "INSERT INTO Utente" +
                                  " (ID_UTENTE, EMAIL, PASSWORD, CREDITO, ID_RUOLO, USERNAME)" +
                                  " VALUES (?,?,?,?,?,?)";
         
-        returnmessage +="Arrivato prima del prepareStatement <br>";
-        
+ 
             
         try {
             // Popolo la dbConnection
@@ -139,10 +128,8 @@ public class DBManager implements Serializable{
             // Eseguo la query associata al SQL
             preparedStatement.executeUpdate();
             
-            returnmessage +="Utente inserito con successo!<br>";
-            
-          
-            
+            returnmessage +="Utente " + username + " inserito con successo!<br>";
+
         } catch (SQLException e) {
             returnmessage += "Errore in addUser: " + e.toString() + "<br>";
         } finally {
@@ -187,6 +174,7 @@ public class DBManager implements Serializable{
         }
         if(con!=null)
           con.close();
+        
         return esseriumani;
     }
     
@@ -286,12 +274,12 @@ public class DBManager implements Serializable{
                                  " VALUES (?,?,?,?)";
          
          pstm = dbConnection.prepareStatement(insertUtenteSQL);
-         
+         /*
             
             pstm.setInt(1,);
             pstm.setString(2,email);
             pstm.setString(3,password);
-            pstm.setDouble(4,0);
+            pstm.setDouble(4,0);*/
       
         
          

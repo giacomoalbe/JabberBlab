@@ -1,0 +1,50 @@
+.pass_dimenticata,
+.pass_dimenticata:hover,
+.pass_dimenticata:active,
+.pass_dimenticata:visited{
+    float: right;
+    color: #333333;
+    text-decoration-color: #333333;
+}
+
+#sub_login{
+    float: right;
+    width: 100%;
+}
+
+.registrazione:hover,
+.registrazione:visited,
+.registrazione:active{
+    text-decoration: none;
+    color: #FFFFFF;
+    outline: none;
+}
+
+.ritorna,
+.ritorna:hover,
+.ritorna:visited,
+.ritorna:active{
+    font-weight: 500;
+    color: #333333;
+    text-decoration-color: #333333;
+}
+
+.reg_completa{
+    width: 100%;
+}
+
+.invio_mail_pass{
+    width: 100%
+}
+
+#form_recuperopass > .form-group{
+    margin-bottom: 0;
+}
+
+#form_login{
+    margin-top: 3em;
+}
+
+.contattaci > .form-group{
+    border-color: #333333;
+}
