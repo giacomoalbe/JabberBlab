@@ -99,7 +99,14 @@ $(document).ready(function(){
         modalRiempimento(id_film, showModalCb);
     }
     
+    var DOM_tabelle_amministratore = {
+        "info": false,
+        "dom": '<"pull-left"f><"pull-right"l>tp'
+    }
     
-   
-    $('#incassi').DataTable();
+    $('#incassi').DataTable(DOM_tabelle_amministratore);
+    
+    $('#programmazione').DataTable(DOM_tabelle_amministratore);
+    
+    $('#clientitop').DataTable(DOM_tabelle_amministratore);
 });

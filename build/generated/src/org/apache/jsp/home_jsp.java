@@ -3,8 +3,9 @@ package org.apache.jsp;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
+import org.json.simple.JSONObject;
 
-public final class contatti_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -51,63 +52,52 @@ public final class contatti_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
-      out.write("\n");
-      out.write("\n");
-      out.write("\n");
-      out.write("<!DOCTYPE html>\n");
-      out.write("<html>\n");
-      out.write("    <head>\n");
-      out.write("        \n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("<!DOCTYPE html>\r\n");
+      out.write("<html>\r\n");
+      out.write("    <head>\r\n");
+      out.write("        \r\n");
       out.write("        ");
       if (_jspx_meth_c_import_0(_jspx_page_context))
         return;
-      out.write("\n");
-      out.write("        <title>JB - Contatti</title>\n");
-      out.write("    </head>\n");
-      out.write("    <body class=\"normalbody\">\n");
+      out.write("\r\n");
+      out.write("        <title>Jabberblab</title>\r\n");
+      out.write("    </head>\r\n");
+      out.write("    <body class=\"normalbody\">\r\n");
       out.write("        ");
       if (_jspx_meth_c_import_1(_jspx_page_context))
         return;
-      out.write("\n");
-      out.write("        <div class=\"row\">\n");
-      out.write("            <div class=\"col-md-3 col-md-offset-2 col-xs-10 col-xs-offset-1 dovesiamo\"> <!--mancano misure tablet-->\n");
-      out.write("                \n");
-      out.write("                <h3>Dove siamo</h3>\n");
-      out.write("                <center>\n");
-      out.write("                    <iframe width=\"400\" height=\"280\" frameborder=\"0\" src=\"http://www.bing.com/maps/embed/viewer.aspx?v=3&cp=46.424305~11.155004&lvl=15&w=400&h=280&sty=h&typ=d&pp=JabberBlab~Via%20Roen%2032%2C%20Ronzone~46.424305~11.155004&ps=&dir=0&mkt=it-it&src=O365&form=BMEMJS\"></iframe>\n");
-      out.write("                </center>\n");
-      out.write("                <br>\n");
-      out.write("                <p><b>JabberBlab Cinema</b><br>\n");
-      out.write("                    Via Roen 32<br>\n");
-      out.write("                    38010 Ronzone (TN)<br>\n");
-      out.write("                Tel: 123456789\n");
-      out.write("                </p>\n");
-      out.write("            </div>\n");
-      out.write("            <div class=\"col-md-3 col-md-offset-2 col-xs-10 col-xs-offset-1\">\n");
-      out.write("                <h3>Contattaci</h3>\n");
-      out.write("                <form class=\"contattaci\" action = \"SendEmail\" method=\"GET\">\n");
-      out.write("                    <div class=\"form-group\">\n");
-      out.write("                        <div>\n");
-      out.write("                            <input type=\"text\" class=\"form-control\" name=\"contactus_nome\" placeholder=\"Nome\" required>\n");
-      out.write("                        </div>\n");
-      out.write("                    </div>\n");
-      out.write("                    <div class=\"form-group\">\n");
-      out.write("                        <input type=\"email\" class=\"form-control\" name=\"contactus_email\" placeholder=\"Email\" required>                        \n");
-      out.write("                    </div>\n");
-      out.write("                    <div class=\"form-group\">\n");
-      out.write("                        <textarea class=\"form-control col-md-12 col-xs-12\" rows=\"6\" name=\"contactus_mess\" placeholder=\"Messaggio\" required></textarea>\n");
-      out.write("                    </div>\n");
-      out.write("                    <br>\n");
-      out.write("                    <button type=\"submit\" id=\"sub_contactus\" class=\"btn btn-default btn-block\">Invia</button>                \n");
-      out.write("                </form>\n");
-      out.write("            </div>\n");
-      out.write("        </div>\n");
+      out.write("\r\n");
+      out.write("        <div class=\"film_home_append\"></div>\r\n");
+      out.write("        \r\n");
       out.write("        ");
       if (_jspx_meth_c_import_2(_jspx_page_context))
         return;
-      out.write("\n");
-      out.write("    </body>\n");
-      out.write("</html>\n");
+      out.write("\r\n");
+      out.write("        \r\n");
+      out.write("        \r\n");
+      out.write("    </body>\r\n");
+      out.write("</html>\r\n");
+      out.write("\r\n");
+      out.write("<div id=\"film_modal\" class=\"modal fade\">\r\n");
+      out.write("    <div class=\"modal-dialog\">\r\n");
+      out.write("        <div class=\"modal-content\">\r\n");
+      out.write("            <div class=\"modal-header\">\r\n");
+      out.write("                <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>\r\n");
+      out.write("            </div>\r\n");
+      out.write("            <div class=\"modal-body\">\r\n");
+      out.write("                <div class=\"container-fluid\">\r\n");
+      out.write("                    <div class=\"row\"></div>\r\n");
+      out.write("                    </div>   \r\n");
+      out.write("                </div>\r\n");
+      out.write("            </div>\r\n");
+      out.write("        </div>\r\n");
+      out.write("    </div>\r\n");
+      out.write("</div>");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;

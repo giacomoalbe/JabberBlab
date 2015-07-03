@@ -20,7 +20,7 @@
             
             
             </center>
-            <form method="get" action="RecuperoPasswordEmail" > 
+            <form method="GET" action="RecuperoPassword" > 
             <div class="form-group row">
                 <div class="col-md-9 col-xs-8">
                 <input type="email" class="form-control" id="email_utente" placeholder="Email" required>

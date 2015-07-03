@@ -94,10 +94,14 @@ textarea{
     background-color: #ffffff;
 }
 
-.incassi_container{
+.incassi_container,
+.programmazione_container,
+.clientitop_container{
     max-width: 90%;
 }
-#incassi{
+#incassi,
+#programmazione,
+#clientitop{
     width: 90%;
 }
 

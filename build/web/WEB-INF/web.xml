@@ -24,6 +24,10 @@
         <servlet-name>SendEmail</servlet-name>
         <servlet-class>servlet.SendEmail</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>RecuperoPassword</servlet-name>
+        <servlet-class>servlet.RecuperoPassword</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>AddUserServlet</servlet-name>
         <url-pattern>/AddUserServlet</url-pattern>
@@ -47,6 +51,10 @@
     <servlet-mapping>
         <servlet-name>SendEmail</servlet-name>
         <url-pattern>/SendEmail</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RecuperoPassword</servlet-name>
+        <url-pattern>/RecuperoPassword</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
