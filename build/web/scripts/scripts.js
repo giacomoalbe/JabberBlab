@@ -59,7 +59,7 @@ $(document).ready(function(){
         
     if (val.id_film == id) {
         console.log("entra nell'each");
-        itemheader.push( val.titolo );
+        itemheader.push( "<button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button><h3 class='modal-title'>" + val.titolo + "</h3>" );
         itembody.push("<div class='col-md-4 col-xs-12 film_modal_col1'><center> "
                         + "<img class = 'modal_copertina' src = '" + val.uri_locandina + "'/></center> <br> "
                         + "<b>Titolo: </b>" + val.titolo + "<br>"
@@ -78,8 +78,8 @@ $(document).ready(function(){
             }
         });
         $('.modal-header').empty();
-         $( "<h3/>", {
-                "class": "modal-title",
+         $( "<div/>", {
+                "class": "inner_modal-header",
                 html: itemheader.join( "" )
               }).appendTo( ".modal-header" );
         $('.container-fluid').empty();
