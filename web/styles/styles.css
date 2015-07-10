@@ -83,12 +83,14 @@ textarea{
  padding: 0.5em;
 }
 
-.box_amministratore{
+.box_amministratore,
+.box_utente{
     padding: 10px;
     border: 1px solid transparent;
 }
 
-.inner_amministratore{
+.inner_amministratore,
+.inner_utente{
     padding:5px;
     border: 1px solid transparent;
     background-color: #ffffff;
@@ -96,12 +98,14 @@ textarea{
 
 .incassi_container,
 .programmazione_container,
-.clientitop_container{
+.clientitop_container,
+.filmvisti_container{
     max-width: 90%;
 }
 #incassi,
 #programmazione,
-#clientitop{
+#clientitop,
+#filmvisti{
     width: 90%;
 }
 

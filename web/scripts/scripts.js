@@ -99,14 +99,16 @@ $(document).ready(function(){
         modalRiempimento(id_film, showModalCb);
     }
     
-    var DOM_tabelle_amministratore = {
+    var DOM_tabelle = {
         "info": false,
         "dom": '<"pull-left"f><"pull-right"l>tp'
     }
     
-    $('#incassi').DataTable(DOM_tabelle_amministratore);
+    $('#incassi').DataTable(DOM_tabelle);
     
-    $('#programmazione').DataTable(DOM_tabelle_amministratore);
+    $('#programmazione').DataTable(DOM_tabelle);
     
-    $('#clientitop').DataTable(DOM_tabelle_amministratore);
+    $('#clientitop').DataTable(DOM_tabelle);
+    
+    $('#filmvisti').DataTable(DOM_tabelle);
 });

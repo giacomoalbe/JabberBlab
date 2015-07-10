@@ -75,25 +75,25 @@
                                         <td>Ciao</td>
                                         <td>Ciao</td>
                                         <td>Ciao</td>
-                                        <td><button class="btn btn-danger btn-xs" id="elimina_spettacolo"><span class="glyphicon glyphicon-trash"></span></button></td>
+                                        <td><button class="btn btn-info btn-xs" id="esamina_spettacolo"><span class="glyphicon glyphicon-search"></span></button></td>
                                     </tr>
                                     <tr>
                                         <td>bu</td>
                                         <td>bu</td>
                                         <td>bu</td>
-                                        <td><button class="btn btn-danger btn-xs" id="elimina_spettacolo"><span class="glyphicon glyphicon-trash"></span></button></td>
+                                        <td><button class="btn btn-info btn-xs" id="esamina_spettacolo"><span class="glyphicon glyphicon-search"></span></button></td>
                                     </tr>
                                     <tr>
                                         <td>Ciao</td>
                                         <td>Ciao</td>
                                         <td>Ciao</td>
-                                        <td><button class="btn btn-danger btn-xs" id="elimina_spettacolo"><span class="glyphicon glyphicon-trash"></span></button></td>
+                                        <td><button class="btn btn-info btn-xs" id="esamina_spettacolo"><span class="glyphicon glyphicon-search"></span></button></td>
                                     </tr>
                                     <tr>
                                         <td>bu</td>
                                         <td>bu</td>
                                         <td>bu</td>
-                                        <td><button class="btn btn-danger btn-xs" id="elimina_spettacolo"><span class="glyphicon glyphicon-trash"></span></button></td>
+                                        <td><button class="btn btn-info btn-xs" id="esamina_spettacolo"><span class="glyphicon glyphicon-search"></span></button></td>
                                     </tr>
                                 </tbody>
                             </table>
