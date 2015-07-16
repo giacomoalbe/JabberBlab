@@ -94,13 +94,13 @@ public class DBManager implements Serializable{
           controlConn.close();
     }
     
-    public String controlUsername(String username) throws SQLException{
+    public String controlUsername(String email) throws SQLException{
         Connection dbUserControl = getConnection();
         String result = null;
         
-        PreparedStatement usrCtrl = dbUserControl.prepareStatement("SELECT * FROM utente WHERE username = ?");
+        PreparedStatement usrCtrl = dbUserControl.prepareStatement("SELECT * FROM utente WHERE email = ?");
        
-            usrCtrl.setString(1, username);
+            usrCtrl.setString(1, email);
 
             ResultSet rs = usrCtrl.executeQuery();
             if(rs == null){
@@ -113,21 +113,21 @@ public class DBManager implements Serializable{
     
     
     
-    public String addUser(String username, String email, String password) throws SQLException {
+    public User addUser(String firstname, String lastname, String email, String password) throws SQLException {
         
         String returnmessage = null;
         Connection dbConnection = getConnection();
 
         controlID();
-        String control = controlUsername(username);
+        String control = controlUsername(email);
         
         if(control != null){
             
         }
         
         String insertUtenteSQL = "INSERT INTO Utente" +
-                                 " (ID_UTENTE, EMAIL, PASSWORD, CREDITO, ID_RUOLO, USERNAME)" +
-                                 " VALUES (?,?,?,?,?,?)";
+                                 " (ID_UTENTE, EMAIL, PASSWORD, CREDITO, ID_RUOLO, FIRSTNAME, LASTNAME)" +
+                                 " VALUES (?,?,?,?,?,?,?)";
         
  
             
@@ -143,14 +143,20 @@ public class DBManager implements Serializable{
             preparedStatement.setString(3,password);
             preparedStatement.setDouble(4,0);
             preparedStatement.setInt(5,1);
-            preparedStatement.setString(6,username);
+            preparedStatement.setString(6,firstname);
+            preparedStatement.setString(7,lastname);
             
             
             // Eseguo la query associata al SQL
             preparedStatement.executeUpdate();
-            
-            returnmessage +="Utente " + username + " inserito con successo!<br>";
-
+            User user = new User();
+                    user.setFirstname(firstname);
+                    user.setLastname(lastname);
+                    user.setId_utente(hitId);
+                    user.setEmail(email);
+                    user.setCredito(0);
+            returnmessage +="Utente " + firstname + " " + lastname +  " inserito con successo!<br>";
+                return user;
         } catch (SQLException e) {
             returnmessage += "Errore in addUser: " + e.toString() + "<br>";
         } finally {
@@ -165,8 +171,9 @@ public class DBManager implements Serializable{
                 dbConnection.close();
             }
         }
+        return null;
         
-        return returnmessage;
+        
     }
     
     public User authenticate(String email, String password) throws SQLException {
@@ -183,7 +190,8 @@ public class DBManager implements Serializable{
             try {
                 if (rs.next()) {
                     User user = new User();
-                    user.setUsername(rs.getString("username"));
+                    user.setFirstname(rs.getString("firstname"));
+                    user.setLastname(rs.getString("lastname"));
                     user.setId_utente(rs.getInt("id_utente"));
                     user.setEmail(email);
                     user.setCredito(rs.getDouble("credito"));
@@ -214,7 +222,8 @@ public class DBManager implements Serializable{
                 User p = new User();
                 
                 p.setId_utente(rs.getInt("ID_UTENTE"));
-                p.setUsername(rs.getString("USERNAME"));
+                p.setFirstname(rs.getString("firstname"));
+                p.setLastname(rs.getString("lastname"));
                 p.setEmail(rs.getString("EMAIL"));
                 p.setPassword(rs.getString("PASSWORD"));
                 
@@ -228,6 +237,31 @@ public class DBManager implements Serializable{
           con.close();
         
         return esseriumani;
+    }
+    
+    public String RecuperoPassword(String email) throws SQLException{
+        
+        try (Connection dbConnection = getConnection(); 
+            PreparedStatement recstm = dbConnection.prepareStatement("SELECT * FROM utente WHERE email = ?")) {
+            recstm.setString(1, email);
+            String recpwd = null;
+            ResultSet rst = recstm.executeQuery();
+            
+            if (rst.next()) {
+            recpwd = rst.getString("password");
+            return recpwd; 
+            } else {
+            return recpwd;
+            }
+             
+        } catch (SQLException e) {
+            System.out.println("Errore in get utente: " + e.toString());
+            System.out.println(e.getStackTrace());
+            Logger.getLogger(DBManager.class.getName()).log(Level.SEVERE, null, e);
+        }
+        
+        return "";
+               
     }
     
     

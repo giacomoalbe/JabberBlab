@@ -8,6 +8,7 @@ package servlet;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -39,6 +40,16 @@ public class FilmSession extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet FilmSession at " + request.getContextPath() + "</h1>");
+            String filmselected = request.getParameter("film");
+            Cookie[] cookies = request.getCookies();
+            Cookie cookie;
+            int i = 1;
+            cookie = cookies[i];
+            String currentUser = cookie.getValue();
+                
+            out.println("<h3> Nome utente: " + currentUser + "<br>");
+            out.println("<h3> Film scelto: " + filmselected + "<br>");
+            
             out.println("</body>");
             out.println("</html>");
         }

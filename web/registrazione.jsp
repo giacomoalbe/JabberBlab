@@ -18,18 +18,15 @@
                 <br>
         
                 <form data-toggle="validator" action="AddUserServlet" > 
-           <!-- <div class="form-group">
+           <div class="form-group">
                 <label for="nome_utente">Nome</label>
-                <input type="text" class="form-control" id="nome_utente" placeholder="Nome" required>
+                <input type="text" class="form-control" id="nome_utente" name = "firstname" placeholder="Nome" required>
             </div>
             <div class="form-group">
                 <label for="cognome_utente">Cognome</label>
-                <input type="text" class="form-control" id="cognome_utente" placeholder="Cognome" required>
-            </div> -->
-           <div class="form-group">
-                <label for="username">Username</label>
-                <input type="text" class="form-control" id="username" name="username" placeholder="Username" required>
+                <input type="text" class="form-control" id="cognome_utente" name = "lastname" placeholder="Cognome" required>
             </div> 
+           
             <div class="form-group">
                 <label for="email_utente">Indirizzo E-mail</label>
                 <input type="email" class="form-control" id="email_utente" name="email" placeholder="E-mail" required>

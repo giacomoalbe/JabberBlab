@@ -72,7 +72,7 @@ $(document).ready(function(){
                         +"</div>"
                         + "<div class='col-md-4 col-xs-12 film_modal_col3'>"
                         + "<center>SALA</center><br>"
-                        + "<button class='btn btn btn-success btn-block'>Compra un biglietto! <span class='glyphicon glyphicon glyphicon-arrow-right'></span></button>"
+                        + "<form action='FilmSession' method = 'GET'> <input type='hidden' name='film' value='" + val.titolo + "'><button type = 'submit' class='btn btn btn-success btn-block'>Compra un biglietto! <span class='glyphicon glyphicon glyphicon-arrow-right'></span></button></form>"
                         +"</div>"
                         );
             }

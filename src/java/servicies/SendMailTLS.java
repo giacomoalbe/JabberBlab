@@ -42,6 +42,7 @@ public class SendMailTLS {
 		try {
  
 			Message message = new MimeMessage(session);
+                        message.setContent(msg, "text/html; charset=utf-8");
 			message.setFrom(new InternetAddress(username));
 			message.setRecipients(Message.RecipientType.TO,
 				InternetAddress.parse(email));

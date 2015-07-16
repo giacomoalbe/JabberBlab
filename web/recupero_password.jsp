@@ -20,10 +20,10 @@
             
             
             </center>
-            <form method="get" action="RecuperoPasswordEmail" > 
+            <form method="GET" action="RecuperoPassword" > 
             <div class="form-group row">
                 <div class="col-md-9 col-xs-8">
-                <input type="email" class="form-control" id="email_utente" placeholder="Email" required>
+                <input type="email" name = "email" class="form-control" id="email_utente" placeholder="Email" required>
                 </div>
                 <div class="col-md-2 col-md-offset-1 col-xs-2 col-xs-offset-1">
                     <button type="submit" class="btn btn-default invio_mail_pass">Invia</button>

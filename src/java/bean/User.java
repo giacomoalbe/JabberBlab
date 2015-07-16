@@ -15,14 +15,15 @@ public class User implements Serializable{
     private String email;
     private String password;
     private double credito;
-    private String username;
+    private String firstname;
+    private String lastname;
     private int id_ruolo;
     
      public User(){}
      
      public String printUser(){
          String pUser = "<br> ------------- <br> UTENTE <br> ------------- <br>";
-         pUser += "id: " + id_utente + " email: " + email + " password: " + password + " credito: " + credito + " username: " + username + "<br>"; 
+         pUser += "id: " + id_utente + " email: " + email + " password: " + password + " credito: " + credito + " firstname: " + getFirstname() + " lastname: " + getLastname() + "<br>"; 
          pUser += "<br> ------------- <br>";
          return pUser;
      }
@@ -30,7 +31,7 @@ public class User implements Serializable{
      public String printUserTable(){
          String pUser = "<tr>";
          pUser += "<td> id: " + id_utente + " </td><td> email: " + email + " </td><td>password: " 
-                 + password + " </td><td>credito: " + credito + " </td><td>username: " + username + "</td>"; 
+                 + password + " </td><td>credito: " + credito + " </td><td>firstname: " + getFirstname() + "</td>" + "<td>lastname: " + getLastname() + "</td>"; 
          pUser += "</tr>";
          return pUser;
      }
@@ -108,14 +109,33 @@ public class User implements Serializable{
     /**
      * @return the username
      */
-    public String getUsername() {
-        return username;
+   
+
+    /**
+     * @return the firstname
+     */
+    public String getFirstname() {
+        return firstname;
     }
 
     /**
-     * @param username the username to set
+     * @param firstname the firstname to set
      */
-    public void setUsername(String username) {
-        this.username = username;
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
+    }
+
+    /**
+     * @return the lastname
+     */
+    public String getLastname() {
+        return lastname;
+    }
+
+    /**
+     * @param lastname the lastname to set
+     */
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
     }
 }
