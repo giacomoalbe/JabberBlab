@@ -99,7 +99,8 @@ textarea{
 .incassi_container,
 .programmazione_container,
 .clientitop_container,
-.filmvisti_container{
+.filmvisti_container,
+.statisticheutente_container{
     max-width: 90%;
 }
 #incassi,
@@ -117,3 +118,38 @@ textarea{
     margin-right: 0px;
     padding-right: 0;
 }*/
+.statisticheutente_container,
+.infoutente_container{
+    background-color: #ffffff;
+    border-right: 0;
+    margin: auto;
+}
+.statistiche_utente_col1,
+.statistiche_utente_col2{
+    border-right: 1.5px solid #333333;
+}
+.statistiche_utente_col1,
+.statistiche_utente_col2,
+.statistiche_utente_col3{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+.img_statisticheutente{
+    width: 70%;
+}
+
+.spazio{
+    background-color: #6fc0ed;
+}
+
+.infoutente_container{
+    padding: 2em;
+}
+
+.divisore_info{
+    margin-right: 1em;
+    margin-left: 1em;
+    background-color: #333333;
+    height: 0.1em;
+}

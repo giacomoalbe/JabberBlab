@@ -47,9 +47,6 @@ $(document).ready(function(){
     };
     
     var modalRiempimento = function(id,callback){
-        console.log("entra in modal funct stronz");
-        
-        
         var itemheader = [];
         var itembody = [];
         console.log(id);
@@ -111,4 +108,10 @@ $(document).ready(function(){
     $('#clientitop').DataTable(DOM_tabelle);
     
     $('#filmvisti').DataTable(DOM_tabelle);
+    
+    $('#spettacoloutenti').DataTable(DOM_tabelle);
+    
+    $("#esamina_spettacolo").click(function(){
+       $("#spettacoloutenti_modal").modal('show'); 
+    });
 });

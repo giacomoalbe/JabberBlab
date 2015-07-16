@@ -67,7 +67,7 @@
                                         <th>Titolo</th>
                                         <th>Spettacolo</th>
                                         <th># Posti</th>
-                                        <th>X</th>
+                                        <th>Dettagli</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -75,25 +75,25 @@
                                         <td>Ciao</td>
                                         <td>Ciao</td>
                                         <td>Ciao</td>
-                                        <td><button class="btn btn-info btn-xs" id="esamina_spettacolo"><span class="glyphicon glyphicon-search"></span></button></td>
+                                        <td><center><button class="btn btn-info btn-xs" id="esamina_spettacolo"><span class="glyphicon glyphicon-search"></span></button></center></td>
                                     </tr>
                                     <tr>
                                         <td>bu</td>
                                         <td>bu</td>
                                         <td>bu</td>
-                                        <td><button class="btn btn-info btn-xs" id="esamina_spettacolo"><span class="glyphicon glyphicon-search"></span></button></td>
+                                        <td><center><button class="btn btn-info btn-xs" id="esamina_spettacolo"><span class="glyphicon glyphicon-search"></span></button></center></td>
                                     </tr>
                                     <tr>
                                         <td>Ciao</td>
                                         <td>Ciao</td>
                                         <td>Ciao</td>
-                                        <td><button class="btn btn-info btn-xs" id="esamina_spettacolo"><span class="glyphicon glyphicon-search"></span></button></td>
+                                        <td><center><button class="btn btn-info btn-xs" id="esamina_spettacolo"><span class="glyphicon glyphicon-search"></span></button></center></td>
                                     </tr>
                                     <tr>
                                         <td>bu</td>
                                         <td>bu</td>
                                         <td>bu</td>
-                                        <td><button class="btn btn-info btn-xs" id="esamina_spettacolo"><span class="glyphicon glyphicon-search"></span></button></td>
+                                        <td><center><button class="btn btn-info btn-xs" id="esamina_spettacolo"><span class="glyphicon glyphicon-search"></span></button></center></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -109,6 +109,7 @@
                                 <thead>
                                     <tr>
                                         <th>Nome</th>
+                                        <th>Cognome</th>
                                         <th># Film</th>
                                         <th>€</th>
                                     </tr>
@@ -118,8 +119,10 @@
                                         <td>Ciao</td>
                                         <td>Ciao</td>
                                         <td>Ciao</td>
+                                        <td>Ciao</td>
                                     </tr>
                                     <tr>
+                                        <td>bu</td>
                                         <td>bu</td>
                                         <td>bu</td>
                                         <td>bu</td>
@@ -128,8 +131,10 @@
                                         <td>Ciao</td>
                                         <td>Ciao</td>
                                         <td>Ciao</td>
+                                        <td>Ciao</td>
                                     </tr>
                                     <tr>
+                                        <td>bu</td>
                                         <td>bu</td>
                                         <td>bu</td>
                                         <td>bu</td>
@@ -145,3 +150,54 @@
         <c:import url="footer.jsp"></c:import>
     </body>
 </html>
+
+<div id="spettacoloutenti_modal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div><button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button><h3 class="modal-title">TITOLO FILM - SPETTACOLO</h3></div>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <table id="spettacoloutenti" class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Nome</th>
+                                        <th>Cognome</th>
+                                        <th># Posti</th>
+                                        <th>Elimina</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Chiara</td>
+                                        <td>Dalpiaz</td>
+                                        <td>2</td>
+                                        <td><button class="btn btn-danger btn-xs" id="elimina_spettacoloutente"><span class="glyphicon glyphicon-trash"></span></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Monica</td>
+                                        <td>Pedron</td>
+                                        <td>3</td>
+                                        <td><button class="btn btn-danger btn-xs" id="elimina_spettacoloutente"><span class="glyphicon glyphicon-trash"></span></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Giacomo</td>
+                                        <td>Alberini</td>
+                                        <td>4</td>
+                                        <td><button class="btn btn-danger btn-xs" id="elimina_spettacoloutente"><span class="glyphicon glyphicon-trash"></span></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Andrea</td>
+                                        <td>Brunelli</td>
+                                        <td>1</td>
+                                        <td><button class="btn btn-danger btn-xs" id="elimina_spettacoloutente"><span class="glyphicon glyphicon-trash"></span></button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                    </div>   
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
