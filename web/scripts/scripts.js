@@ -47,9 +47,6 @@ $(document).ready(function(){
     };
     
     var modalRiempimento = function(id,callback){
-        console.log("entra in modal funct stronz");
-        
-        
         var itemheader = [];
         var itembody = [];
         console.log(id);
@@ -59,7 +56,7 @@ $(document).ready(function(){
         
     if (val.id_film == id) {
         console.log("entra nell'each");
-        itemheader.push( val.titolo );
+        itemheader.push( "<button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button><h3 class='modal-title'>" + val.titolo + "</h3>" );
         itembody.push("<div class='col-md-4 col-xs-12 film_modal_col1'><center> "
                         + "<img class = 'modal_copertina' src = '" + val.uri_locandina + "'/></center> <br> "
                         + "<b>Titolo: </b>" + val.titolo + "<br>"
@@ -72,14 +69,14 @@ $(document).ready(function(){
                         +"</div>"
                         + "<div class='col-md-4 col-xs-12 film_modal_col3'>"
                         + "<center>SALA</center><br>"
-                        + "<form action='FilmSession' method = 'GET'> <input type='hidden' name='film' value='" + val.titolo + "'><button type = 'submit' class='btn btn btn-success btn-block'>Compra un biglietto! <span class='glyphicon glyphicon glyphicon-arrow-right'></span></button></form>"
+                        + "<button class='btn btn btn-success btn-block'>Compra un biglietto! <span class='glyphicon glyphicon glyphicon-arrow-right'></span></button>"
                         +"</div>"
                         );
             }
         });
         $('.modal-header').empty();
-         $( "<h3/>", {
-                "class": "modal-title",
+         $( "<div/>", {
+                "class": "inner_modal-header",
                 html: itemheader.join( "" )
               }).appendTo( ".modal-header" );
         $('.container-fluid').empty();
@@ -99,7 +96,22 @@ $(document).ready(function(){
         modalRiempimento(id_film, showModalCb);
     }
     
+    var DOM_tabelle = {
+        "info": false,
+        "dom": '<"pull-left"f><"pull-right"l>tp'
+    }
     
-   
-    $('#incassi').DataTable();
+    $('#incassi').DataTable(DOM_tabelle);
+    
+    $('#programmazione').DataTable(DOM_tabelle);
+    
+    $('#clientitop').DataTable(DOM_tabelle);
+    
+    $('#filmvisti').DataTable(DOM_tabelle);
+    
+    $('#spettacoloutenti').DataTable(DOM_tabelle);
+    
+    $("#esamina_spettacolo").click(function(){
+       $("#spettacoloutenti_modal").modal('show'); 
+    });
 });

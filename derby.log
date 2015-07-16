@@ -12,3 +12,9 @@ os.arch=x86_64
 os.version=10.10.3
 derby.system.home=/Users/apple/GitHub/JabberBlab
 Programma di caricamento classe database avviato - derby.database.classpath=''
+----------------------------------------------------------------
+Thu Jul 16 19:02:10 CEST 2015: arresto in corso del motore di Derby
+----------------------------------------------------------------
+Thu Jul 16 19:02:10 CEST 2015:
+Arresto dell'istanza a816c00e-014e-90e2-c941-0000763a7c10 nella directory del database /Users/apple/GitHub/JabberBlab/JabberBlabDBInterno con il caricatore di classi sun.misc.Launcher$AppClassLoader@5a07e868 
+----------------------------------------------------------------

@@ -60,6 +60,10 @@
         <servlet-name>RecuperoPassword</servlet-name>
         <servlet-class>servlet.RecuperoPassword</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ContactUsMail</servlet-name>
+        <servlet-class>servlet.ContactUsMail</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>AddUserServlet</servlet-name>
         <url-pattern>/AddUserServlet</url-pattern>
@@ -120,12 +124,16 @@
         <servlet-name>RecuperoPassword</servlet-name>
         <url-pattern>/RecuperoPassword</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ContactUsMail</servlet-name>
+        <url-pattern>/ContactUsMail</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30
         </session-timeout>
     </session-config>
     <welcome-file-list>
-        <welcome-file>login.jsp</welcome-file>
+        <welcome-file>home.jsp</welcome-file>
     </welcome-file-list>
 </web-app>

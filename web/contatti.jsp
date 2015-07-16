@@ -10,6 +10,7 @@
     </head>
     <body class="normalbody">
         <c:import url="header.jsp"></c:import>
+        
         <div class="row">
             <div class="col-md-3 col-md-offset-2 col-xs-10 col-xs-offset-1 dovesiamo"> <!--mancano misure tablet-->
                 
@@ -24,9 +25,10 @@
                 Tel: 123456789
                 </p>
             </div>
+          
             <div class="col-md-3 col-md-offset-2 col-xs-10 col-xs-offset-1">
                 <h3>Contattaci</h3>
-                <form class="contattaci" action = "SendEmail" method="GET">
+                <form class="contattaci" action = "ContactUsMail" method="GET" id="contactus">
                     <div class="form-group">
                         <div>
                             <input type="text" class="form-control" name="contactus_nome" placeholder="Nome" required>
@@ -39,8 +41,12 @@
                         <textarea class="form-control col-md-12 col-xs-12" rows="6" name="contactus_mess" placeholder="Messaggio" required></textarea>
                     </div>
                     <br>
-                    <button type="submit" id="sub_contactus" class="btn btn-default btn-block">Invia</button>                
+                    <button type="submit" id="sub_contactus" class="btn btn-default btn-block" value="invia">Invia</button>                
+                    
+                    <h3 style="color:green;"> <c:out value = '${resp}'> </c:out> </h3>
                 </form>
+                
+                
             </div>
         </div>
         <c:import url="footer.jsp"></c:import>

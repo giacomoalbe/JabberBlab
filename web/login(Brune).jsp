@@ -19,7 +19,7 @@
             
             <h3>Form Login</h3>
             
-        <form action="LoginServlet" method="POST" name="log_form">
+        <form action="" method="POST" name="log_form">
             Nome utente: </br>
             <input type="text" name="username"> </br>
             Email: </br>

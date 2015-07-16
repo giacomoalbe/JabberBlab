@@ -44,18 +44,27 @@ public class LoginServlet extends HttpServlet {
         User utente = manager.authenticate(email, password);
         
         if(utente != null){
-            Cookie loginCookie = new Cookie("user",utente.getFirstname() + " " + utente.getLastname());
+            String id_utente_str = "" + utente.getId_utente();
+            Cookie loginCookie = new Cookie("user", utente.getFirstname() + " " + utente.getLastname());
+            Cookie id_utente = new Cookie("id_utente", id_utente_str);
+            Cookie utente_email = new Cookie("email", utente.getEmail());
             //setting cookie to expiry in 1 hour
             loginCookie.setMaxAge(3600);
             response.addCookie(loginCookie);
-            response.sendRedirect("home.jsp");
+            response.addCookie(id_utente);
+            response.addCookie(utente_email);
+            String name = "Ciao, " + utente.getFirstname() + "!" ;
+            request.setAttribute("logokresp", name);
+            RequestDispatcher disp = request.getRequestDispatcher("/home.jsp");
+            disp.forward(request, response);
         }
         else{
-            RequestDispatcher rd = getServletContext().getRequestDispatcher("login.jsp");
-            PrintWriter out = response.getWriter();
-            out.println("<font color = 'red'> Errore: passoword o e-mail non inserita correttamente! </font>");
-            rd.include(request, response);
+            String risp = "Email o password non inserita correttamente!";
+            request.setAttribute("logresp", risp);
+            RequestDispatcher disp = request.getRequestDispatcher("/login.jsp");
+            disp.forward(request, response);
         }
+        
         
         /*
         try (PrintWriter out = response.getWriter()) {

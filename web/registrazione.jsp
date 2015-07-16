@@ -9,6 +9,7 @@
         <title>JB - Registrati</title>
     </head>
     <body class="formbody">
+        <div class="sfondo">
         <c:import url="header_form.jsp"></c:import>
         <div class="col-md-4 col-md-offset-4 col-xs-10 col-xs-offset-1">
             <div id="form_registrazione">
@@ -17,16 +18,15 @@
                 </center>
                 <br>
         
-                <form data-toggle="validator" action="AddUserServlet" > 
-           <div class="form-group">
+        <form data-toggle="validator" action="AddUserServlet" method="POST"> 
+            <div class="form-group">
                 <label for="nome_utente">Nome</label>
-                <input type="text" class="form-control" id="nome_utente" name = "firstname" placeholder="Nome" required>
+                <input type="text" class="form-control" id="nome_utente" name="firstname" placeholder="Nome" required>
             </div>
             <div class="form-group">
                 <label for="cognome_utente">Cognome</label>
-                <input type="text" class="form-control" id="cognome_utente" name = "lastname" placeholder="Cognome" required>
-            </div> 
-           
+                <input type="text" class="form-control" id="cognome_utente" name="lastname" placeholder="Cognome" required>
+            </div>
             <div class="form-group">
                 <label for="email_utente">Indirizzo E-mail</label>
                 <input type="email" class="form-control" id="email_utente" name="email" placeholder="E-mail" required>
@@ -47,6 +47,7 @@
         <center>
             <a class="ritorna" href="home.jsp"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>Ritorna al sito</a>
         </center>
+    </div>
     </div>
     </body>
 </html>

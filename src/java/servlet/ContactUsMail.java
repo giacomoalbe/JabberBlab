@@ -5,12 +5,8 @@
  */
 package servlet;
 
-import db.DBManager;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -22,7 +18,7 @@ import static servicies.SendMailTLS.sendEmail;
  *
  * @author Andrea
  */
-public class RecuperoPassword extends HttpServlet {
+public class ContactUsMail extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -34,29 +30,33 @@ public class RecuperoPassword extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException, SQLException {
+            throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            String email = request.getParameter("email");
-            DBManager manager = new DBManager();
-            String password = manager.RecuperoPassword(email);
-        
-            if(password == null){
-                    String risp = "L'email non è registrata presso il nostro database! Sei sicuro che sia proprio questa?";
+            /* TODO output your page here. You may use following sample code. */
+            String nome = request.getParameter("contactus_nome");
+            String email = request.getParameter("contactus_email");
+            String msg = request.getParameter("contactus_mess");
+            
+            String redirecting = "jabberblabcinema@gmail.com";
+            String mergeContent = 
+                    "---------------------------------------\nRICHIESTA INFORMAZIONE\n---------------------------------------\n" +
+                    "Richiedente: " + nome
+                    + "\nMessaggio: " + msg +"\n\nRispondere a: " + email +"";
+            String subject = "Richiesta info - "+ nome +"";
+            sendEmail(redirecting,subject,mergeContent);
+            
+            String ciao = "ciao schifo";
+            
+            String risp = "Grazie per averci contattato!";
+                    
+                    
                     request.setAttribute("resp", risp);
-                    RequestDispatcher disp = request.getRequestDispatcher("/recupero_password.jsp");
-                    disp.forward(request, response);    
-            }        
-            else{
-            String risp = "Email inviata correttamente!";
-            request.setAttribute("resp", risp);
-                    RequestDispatcher disp = request.getRequestDispatcher("/recupero_password.jsp");
+                    RequestDispatcher disp = request.getRequestDispatcher("/contatti.jsp");
                     disp.forward(request, response);
-            String subject = "Recupero Password - Jabberblab cinema";
-            String body = "Buongiorno,\nLa sua password è '"+ password +"'. \n\nSaluti, Jabberblab Cinema";
-
-            sendEmail(email,subject,body);
-            }        
+                    
+            //response.sendRedirect("home.jsp" + risp);
+           
             
         }
     }
@@ -73,11 +73,7 @@ public class RecuperoPassword extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        try {
-            processRequest(request, response);
-        } catch (SQLException ex) {
-            Logger.getLogger(RecuperoPassword.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        processRequest(request, response);
     }
 
     /**
@@ -91,11 +87,7 @@ public class RecuperoPassword extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        try {
-            processRequest(request, response);
-        } catch (SQLException ex) {
-            Logger.getLogger(RecuperoPassword.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        processRequest(request, response);
     }
 
     /**

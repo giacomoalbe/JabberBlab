@@ -3,17 +3,25 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/apple/GitHub/JabberBlab/web/head.jsp</file>
-            <file>file:/Users/apple/GitHub/JabberBlab/src/java/db/DBManager.java</file>
-            <file>file:/Users/apple/GitHub/JabberBlab/src/java/servlet/SendEmail.java</file>
-            <file>file:/Users/apple/GitHub/JabberBlab/src/java/servlet/LoginServlet.java</file>
+            <file>file:/Users/apple/GitHub/JabberBlab/src/java/servlet/ContactUsMail.java</file>
+            <file>file:/Users/apple/GitHub/JabberBlab/web/footer.jsp</file>
             <file>file:/Users/apple/GitHub/JabberBlab/web/registrazione.jsp</file>
-            <file>file:/Users/apple/GitHub/JabberBlab/src/java/servlet/SetCookies.java</file>
+            <file>file:/Users/apple/GitHub/JabberBlab/web/styles/styles.css</file>
+            <file>file:/Users/apple/GitHub/JabberBlab/web/header.jsp</file>
+            <file>file:/Users/apple/GitHub/JabberBlab/src/java/servlet/RecuperoPassword.java</file>
             <file>file:/Users/apple/GitHub/JabberBlab/src/java/servlet/AddUserServlet.java</file>
             <file>file:/Users/apple/GitHub/JabberBlab/web/WEB-INF/web.xml</file>
             <file>file:/Users/apple/GitHub/JabberBlab/web/login.jsp</file>
-            <file>file:/Users/apple/GitHub/JabberBlab/src/java/servlet/ShowCookies.java</file>
-            <file>file:/Users/apple/GitHub/JabberBlab/src/java/servicies/SendMailTLS.java</file>
+            <file>file:/Users/apple/GitHub/JabberBlab/web/head.jsp</file>
+            <file>file:/Users/apple/GitHub/JabberBlab/src/java/db/DBManager.java</file>
+            <file>file:/Users/apple/GitHub/JabberBlab/src/java/servlet/LoginServlet.java</file>
+            <file>file:/Users/apple/GitHub/JabberBlab/web/scripts/scripts.js</file>
+            <file>file:/Users/apple/GitHub/JabberBlab/src/java/servlet/ChooseFilm.java</file>
+            <file>file:/Users/apple/GitHub/JabberBlab/web/header_form.jsp</file>
+            <file>file:/Users/apple/GitHub/JabberBlab/web/home.jsp</file>
+            <file>file:/Users/apple/GitHub/JabberBlab/web/styles/mainstyles.css</file>
+            <file>file:/Users/apple/GitHub/JabberBlab/web/contatti.jsp</file>
+            <file>file:/Users/apple/GitHub/JabberBlab/web/recupero_password.jsp</file>
         </group>
     </open-files>
 </project-private>
