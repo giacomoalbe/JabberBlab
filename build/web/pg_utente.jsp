@@ -91,7 +91,7 @@
                             <p><b>Nome: </b>Chiara</p>
                             <p><b>Cognome: </b>Dalpiaz</p>
                             <p><b>Email: </b>chiara.dalpiaz@hotmail.it</p>
-                            <p><b>Password: </b>pollo</p>
+                            <p><b>Password: </b>palla</p>
                             <hr class="divisore_info">
                             <p><b>Carta di Credito</b></p>
                             <p><b>Codice: </b>1234 1234 1234 1234</p>
