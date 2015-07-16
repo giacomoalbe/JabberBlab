@@ -24,6 +24,38 @@
         <servlet-name>SendEmail</servlet-name>
         <servlet-class>servlet.SendEmail</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>servlet.LoginServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SetCookies</servlet-name>
+        <servlet-class>servlet.SetCookies</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ShowCookies</servlet-name>
+        <servlet-class>servlet.ShowCookies</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ShowSession</servlet-name>
+        <servlet-class>servlet.ShowSession</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SessionContentShow</servlet-name>
+        <servlet-class>servlet.SessionContentShow</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>FilmSession</servlet-name>
+        <servlet-class>servlet.FilmSession</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>servlet.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ChooseFilm</servlet-name>
+        <servlet-class>servlet.ChooseFilm</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>AddUserServlet</servlet-name>
         <url-pattern>/AddUserServlet</url-pattern>
@@ -47,6 +79,38 @@
     <servlet-mapping>
         <servlet-name>SendEmail</servlet-name>
         <url-pattern>/SendEmail</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SetCookies</servlet-name>
+        <url-pattern>/SetCookies</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ShowCookies</servlet-name>
+        <url-pattern>/ShowCookies</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ShowSession</servlet-name>
+        <url-pattern>/ShowSession</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SessionContentShow</servlet-name>
+        <url-pattern>/SessionContentShow</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FilmSession</servlet-name>
+        <url-pattern>/FilmSession</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/LogoutServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ChooseFilm</servlet-name>
+        <url-pattern>/ChooseFilm</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

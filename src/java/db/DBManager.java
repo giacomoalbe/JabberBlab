@@ -94,6 +94,23 @@ public class DBManager implements Serializable{
           controlConn.close();
     }
     
+    public String controlUsername(String username) throws SQLException{
+        Connection dbUserControl = getConnection();
+        String result = null;
+        
+        PreparedStatement usrCtrl = dbUserControl.prepareStatement("SELECT * FROM utente WHERE username = ?");
+       
+            usrCtrl.setString(1, username);
+
+            ResultSet rs = usrCtrl.executeQuery();
+            if(rs == null){
+                return result;
+            }
+            else{
+            return result = "utente doppio!";
+            }
+    }
+    
     
     
     public String addUser(String username, String email, String password) throws SQLException {
@@ -102,6 +119,11 @@ public class DBManager implements Serializable{
         Connection dbConnection = getConnection();
 
         controlID();
+        String control = controlUsername(username);
+        
+        if(control != null){
+            
+        }
         
         String insertUtenteSQL = "INSERT INTO Utente" +
                                  " (ID_UTENTE, EMAIL, PASSWORD, CREDITO, ID_RUOLO, USERNAME)" +
@@ -110,7 +132,6 @@ public class DBManager implements Serializable{
  
             
         try {
-            // Popolo la dbConnection
             
              returnmessage +="Arrivato dopo la connessione <br>";
             // Preparo la query da mandare al DB
@@ -146,6 +167,37 @@ public class DBManager implements Serializable{
         }
         
         return returnmessage;
+    }
+    
+    public User authenticate(String email, String password) throws SQLException {
+        // usare SEMPRE i PreparedStatement, anche per query banali. 
+        // *** MAI E POI MAI COSTRUIRE LE QUERY CONCATENANDO STRINGHE !!!! ***
+        Connection dbConnection = getConnection();
+        PreparedStatement logstm = dbConnection.prepareStatement("SELECT * FROM utente WHERE email = ? AND password = ?");
+        try {
+            logstm.setString(1, email);
+            logstm.setString(2, password);
+            
+            ResultSet rs = logstm.executeQuery();
+
+            try {
+                if (rs.next()) {
+                    User user = new User();
+                    user.setUsername(rs.getString("username"));
+                    user.setId_utente(rs.getInt("id_utente"));
+                    user.setEmail(email);
+                    user.setCredito(rs.getDouble("credito"));
+                    return user;
+                } else {
+                    return null;
+                }
+            } finally {
+                // ricordarsi SEMPRE di chiudere i ResultSet in un blocco finally 
+                rs.close();
+            }
+        } finally { // ricordarsi SEMPRE di chiudere i PreparedStatement in un blocco finally 
+            logstm.close();
+        }
     }
     
     public List<User> getUtente() throws SQLException {

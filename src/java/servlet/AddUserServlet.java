@@ -33,23 +33,14 @@ public class AddUserServlet extends HttpServlet {
             String username = request.getParameter("username");
             String email = request.getParameter("email");
             String password = request.getParameter("password");
-            
-            // Ora lo inserisco in un database
            
-            out.println("Arrivato nella servlet <br>");
-            
-            //DBManagerStandard manager = new DBManagerStandard();
-            
             DBManager manager = new DBManager();
-            
-            //Connection conn = manager.getConnection();
-            out.println("Arrivato dopo la connessione <br>");
           
-            
-            out.println("inizio a registrare " + username + "<br>");
-            
             String vediamo = manager.addUser(username, email, password);
             out.println(vediamo);
+            
+            /*
+            STAMPAGGIO UTENTI
             
             List<User> UtentiNow = manager.getUtente();
             
@@ -63,26 +54,8 @@ public class AddUserServlet extends HttpServlet {
                 out.println("la lista vuota <br>");
             }else{
             out.println("non è vuota e ovviamente te li ho fatti vedere, no? <br>");
-            }
-            
-            
-            out.println("CE L'ABBIAMO FATTA PORCA MISERIA!!! <br>");
-            
-            
-            /*try {
-            if (conn!=null) {
-                out.println("connessione chiusa");
-                conn.close();
-            }
-            } catch (SQLException e) {
-                System.out.println("Chiusura della connessione in Servlet");
             }*/
             
-            /*try {
-                manager.addUser(username, password);
-            } catch (SQLException e) {
-                System.out.println("Errore in ServletAddUser: " + e.toString());
-            }*/
         }
     }
 

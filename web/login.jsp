@@ -12,14 +12,14 @@
     <c:import url="header_form.jsp"></c:import>
     <div class="col-md-4 col-md-offset-4 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
         <div id="form_login">
-        <form >   
+        <form action="LoginServlet" method = "GET">   
             <div class="form-group">
                 <label for="email_utente">Indirizzo E-mail</label>
-                <input type="email" class="form-control" id="email_utente" placeholder="Email">
+                <input type="email" class="form-control" id="email_utente" name = "email_utente" placeholder="Email">
             </div>
             <div class="form-group">
                 <label for="password">Password</label><a href="recupero_password.jsp" class="pass_dimenticata">Password dimenticata?</a>
-                <input type="password" class="form-control" id="password" placeholder="Password">
+                <input type="password" class="form-control" id="password" name = "password" placeholder="Password">
             </div>
             <div class="form-group row">
                 <div class="checkbox col-md-4">

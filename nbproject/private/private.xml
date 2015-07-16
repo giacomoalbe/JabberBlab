@@ -3,13 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/Users/apple/GitHub/JabberBlab/web/head.jsp</file>
             <file>file:/Users/apple/GitHub/JabberBlab/src/java/db/DBManager.java</file>
-            <file>file:/Users/apple/GitHub/JabberBlab/src/java/dbUtils/SalaManager.java</file>
-            <file>file:/Users/apple/GitHub/JabberBlab/src/java/servlet/ShowUser.java</file>
-            <file>file:/Users/apple/GitHub/JabberBlab/src/java/bean/User.java</file>
-            <file>file:/Users/apple/GitHub/JabberBlab/web/Other/film.json</file>
+            <file>file:/Users/apple/GitHub/JabberBlab/src/java/servlet/SendEmail.java</file>
+            <file>file:/Users/apple/GitHub/JabberBlab/src/java/servlet/LoginServlet.java</file>
+            <file>file:/Users/apple/GitHub/JabberBlab/web/registrazione.jsp</file>
+            <file>file:/Users/apple/GitHub/JabberBlab/src/java/servlet/SetCookies.java</file>
             <file>file:/Users/apple/GitHub/JabberBlab/src/java/servlet/AddUserServlet.java</file>
+            <file>file:/Users/apple/GitHub/JabberBlab/web/WEB-INF/web.xml</file>
             <file>file:/Users/apple/GitHub/JabberBlab/web/login.jsp</file>
+            <file>file:/Users/apple/GitHub/JabberBlab/src/java/servlet/ShowCookies.java</file>
+            <file>file:/Users/apple/GitHub/JabberBlab/src/java/servicies/SendMailTLS.java</file>
         </group>
     </open-files>
 </project-private>

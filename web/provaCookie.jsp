@@ -1,4 +1,4 @@
-<%-- HOME.JSP --%>
+<%-- PROVACOOKIE.JSP --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="org.json.simple.JSONObject"%>
@@ -17,6 +17,7 @@
         <c:import url="footer.jsp"></c:import>
         
         
+        
     </body>
 </html>
 
@@ -25,7 +26,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h3 class="modal-title" name ="titolo_film">TITOLO FILM</h3>
+                <h3 class="modal-title">TITOLO FILM</h3>
             </div>
             <div class="modal-body">
                 <div class="container-fluid">
@@ -46,7 +47,7 @@
                         </div>
                         <div class="col-md-4 col-xs-12 film_modal_col3">
                             <center><img src="imgs/esempiosala.JPG"/></center><br>
-                            <button class="btn btn btn-success btn-block" action="ChooseFilm">Compra un biglietto! <span class="glyphicon glyphicon glyphicon-arrow-right"></span></button>
+                            <button class="btn btn btn-success btn-block" action="chooseticket">Compra un biglietto! <span class="glyphicon glyphicon glyphicon-arrow-right"></span></button>
                         </div>
                     </div>   
                 </div>

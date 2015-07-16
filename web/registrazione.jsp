@@ -17,24 +17,28 @@
                 </center>
                 <br>
         
-        <form data-toggle="validator" > 
-            <div class="form-group">
+                <form data-toggle="validator" action="AddUserServlet" > 
+           <!-- <div class="form-group">
                 <label for="nome_utente">Nome</label>
                 <input type="text" class="form-control" id="nome_utente" placeholder="Nome" required>
             </div>
             <div class="form-group">
                 <label for="cognome_utente">Cognome</label>
                 <input type="text" class="form-control" id="cognome_utente" placeholder="Cognome" required>
-            </div>
+            </div> -->
+           <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="Username" required>
+            </div> 
             <div class="form-group">
                 <label for="email_utente">Indirizzo E-mail</label>
-                <input type="email" class="form-control" id="email_utente" placeholder="E-mail" required>
+                <input type="email" class="form-control" id="email_utente" name="email" placeholder="E-mail" required>
             </div>
             <div class="form-group">
                 
             <label for="inputPassword" class="control-label">Password</label>
 
-            <input type="password" class="form-control" id="password" placeholder="Password" required>
+            <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
             <br>
             <input type="password" class="form-control" id="inputPasswordConfirm" data-match="#password" data-match-error="Whoops, these don't match" placeholder="Conferma la password" required>
             <div class="help-block with-errors"></div>

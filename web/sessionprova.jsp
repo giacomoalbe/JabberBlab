@@ -1,0 +1,16 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+ <TITLE>Order Form</TITLE>
+</HEAD>
+<BODY BGCOLOR="#FDF5E6">
+<H1 ALIGN="CENTER">Order Form</H1>
+<FORM ACTION="SessionContentShow">
+ New Item to Order:
+ <INPUT TYPE="TEXT" NAME="newItem" VALUE="yacht"><BR>
+ <CENTER>
+  <INPUT TYPE="SUBMIT" VALUE="Order and Show All Purchases">
+ </CENTER>
+</FORM>
+</BODY>
+</HTML>

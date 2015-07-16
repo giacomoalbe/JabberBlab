@@ -4,7 +4,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 
-public final class contatti_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -62,50 +62,44 @@ public final class contatti_jsp extends org.apache.jasper.runtime.HttpJspBase
       if (_jspx_meth_c_import_0(_jspx_page_context))
         return;
       out.write("\n");
-      out.write("        <title>JB - Contatti</title>\n");
+      out.write("        <title>JB - Login</title>\n");
       out.write("    </head>\n");
-      out.write("    <body class=\"normalbody\">\n");
-      out.write("        ");
+      out.write("    <body class=\"formbody\">\n");
+      out.write("    ");
       if (_jspx_meth_c_import_1(_jspx_page_context))
         return;
       out.write("\n");
-      out.write("        <div class=\"row\">\n");
-      out.write("            <div class=\"col-md-3 col-md-offset-2 col-xs-10 col-xs-offset-1 dovesiamo\"> <!--mancano misure tablet-->\n");
-      out.write("                \n");
-      out.write("                <h3>Dove siamo</h3>\n");
-      out.write("                <center>\n");
-      out.write("                    <iframe width=\"400\" height=\"280\" frameborder=\"0\" src=\"http://www.bing.com/maps/embed/viewer.aspx?v=3&cp=46.424305~11.155004&lvl=15&w=400&h=280&sty=h&typ=d&pp=JabberBlab~Via%20Roen%2032%2C%20Ronzone~46.424305~11.155004&ps=&dir=0&mkt=it-it&src=O365&form=BMEMJS\"></iframe>\n");
-      out.write("                </center>\n");
-      out.write("                <br>\n");
-      out.write("                <p><b>JabberBlab Cinema</b><br>\n");
-      out.write("                    Via Roen 32<br>\n");
-      out.write("                    38010 Ronzone (TN)<br>\n");
-      out.write("                Tel: 123456789\n");
-      out.write("                </p>\n");
+      out.write("    <div class=\"col-md-4 col-md-offset-4 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2\">\n");
+      out.write("        <div id=\"form_login\">\n");
+      out.write("        <form action=\"LoginServlet\" method = \"GET\">   \n");
+      out.write("            <div class=\"form-group\">\n");
+      out.write("                <label for=\"email_utente\">Indirizzo E-mail</label>\n");
+      out.write("                <input type=\"email\" class=\"form-control\" id=\"email_utente\" name = \"email_utente\" placeholder=\"Email\">\n");
       out.write("            </div>\n");
-      out.write("            <div class=\"col-md-3 col-md-offset-2 col-xs-10 col-xs-offset-1\">\n");
-      out.write("                <h3>Contattaci</h3>\n");
-      out.write("                <form class=\"contattaci\" action = \"SendEmail\" method=\"GET\">\n");
-      out.write("                    <div class=\"form-group\">\n");
-      out.write("                        <div>\n");
-      out.write("                            <input type=\"text\" class=\"form-control\" name=\"contactus_nome\" placeholder=\"Nome\" required>\n");
-      out.write("                        </div>\n");
-      out.write("                    </div>\n");
-      out.write("                    <div class=\"form-group\">\n");
-      out.write("                        <input type=\"email\" class=\"form-control\" name=\"contactus_email\" placeholder=\"Email\" required>                        \n");
-      out.write("                    </div>\n");
-      out.write("                    <div class=\"form-group\">\n");
-      out.write("                        <textarea class=\"form-control col-md-12 col-xs-12\" rows=\"6\" name=\"contactus_mess\" placeholder=\"Messaggio\" required></textarea>\n");
-      out.write("                    </div>\n");
-      out.write("                    <br>\n");
-      out.write("                    <button type=\"submit\" id=\"sub_contactus\" class=\"btn btn-default btn-block\">Invia</button>                \n");
-      out.write("                </form>\n");
+      out.write("            <div class=\"form-group\">\n");
+      out.write("                <label for=\"password\">Password</label><a href=\"recupero_password.jsp\" class=\"pass_dimenticata\">Password dimenticata?</a>\n");
+      out.write("                <input type=\"password\" class=\"form-control\" id=\"password\" name = \"password\" placeholder=\"Password\">\n");
       out.write("            </div>\n");
+      out.write("            <div class=\"form-group row\">\n");
+      out.write("                <div class=\"checkbox col-md-4\">\n");
+      out.write("                    <label>\n");
+      out.write("                        <input type=\"checkbox\" id=\"ricordami\">Ricordami\n");
+      out.write("                    </label>\n");
+      out.write("                </div>\n");
+      out.write("                <div class=\"col-md-4 col-md-offset-4\">\n");
+      out.write("                    <button type=\"submit\" id=\"sub_login\" class=\"btn btn-default\"><b>Login</b></button>            \n");
+      out.write("                </div>\n");
+      out.write("            </div>\n");
+      out.write("            </form>\n");
+      out.write("        \n");
+      out.write("        <a href=\"registrazione.jsp\" class=\"btn btn-success btn-block registrazione\" role=\"button\"><b>Registrati</b></a>\n");
       out.write("        </div>\n");
-      out.write("        ");
-      if (_jspx_meth_c_import_2(_jspx_page_context))
-        return;
-      out.write("\n");
+      out.write("        <br>\n");
+      out.write("        <center>\n");
+      out.write("            <a class=\"ritorna\" href=\"home.jsp\"><span class=\"glyphicon glyphicon-menu-left\" aria-hidden=\"true\"></span>Ritorna al sito</a>\n");
+      out.write("        </center>        \n");
+      out.write("        \n");
+      out.write("    </div>\n");
       out.write("    </body>\n");
       out.write("</html>\n");
     } catch (Throwable t) {
@@ -155,7 +149,7 @@ public final class contatti_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.ImportTag _jspx_th_c_import_1 = (org.apache.taglibs.standard.tag.rt.core.ImportTag) _jspx_tagPool_c_import_url_nobody.get(org.apache.taglibs.standard.tag.rt.core.ImportTag.class);
     _jspx_th_c_import_1.setPageContext(_jspx_page_context);
     _jspx_th_c_import_1.setParent(null);
-    _jspx_th_c_import_1.setUrl("header.jsp");
+    _jspx_th_c_import_1.setUrl("header_form.jsp");
     int[] _jspx_push_body_count_c_import_1 = new int[] { 0 };
     try {
       int _jspx_eval_c_import_1 = _jspx_th_c_import_1.doStartTag();
@@ -169,32 +163,6 @@ public final class contatti_jsp extends org.apache.jasper.runtime.HttpJspBase
     } finally {
       _jspx_th_c_import_1.doFinally();
       _jspx_tagPool_c_import_url_nobody.reuse(_jspx_th_c_import_1);
-    }
-    return false;
-  }
-
-  private boolean _jspx_meth_c_import_2(PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  c:import
-    org.apache.taglibs.standard.tag.rt.core.ImportTag _jspx_th_c_import_2 = (org.apache.taglibs.standard.tag.rt.core.ImportTag) _jspx_tagPool_c_import_url_nobody.get(org.apache.taglibs.standard.tag.rt.core.ImportTag.class);
-    _jspx_th_c_import_2.setPageContext(_jspx_page_context);
-    _jspx_th_c_import_2.setParent(null);
-    _jspx_th_c_import_2.setUrl("footer.jsp");
-    int[] _jspx_push_body_count_c_import_2 = new int[] { 0 };
-    try {
-      int _jspx_eval_c_import_2 = _jspx_th_c_import_2.doStartTag();
-      if (_jspx_th_c_import_2.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-        return true;
-      }
-    } catch (Throwable _jspx_exception) {
-      while (_jspx_push_body_count_c_import_2[0]-- > 0)
-        out = _jspx_page_context.popBody();
-      _jspx_th_c_import_2.doCatch(_jspx_exception);
-    } finally {
-      _jspx_th_c_import_2.doFinally();
-      _jspx_tagPool_c_import_url_nobody.reuse(_jspx_th_c_import_2);
     }
     return false;
   }
