@@ -17,21 +17,21 @@
                         <center>
                             <h3>Incassi</h3><br>
                             <div class="incassi_container">
-                            <table id="incassi" class="table table-striped">
+                            <table id="incassi" class="table table-striped table-responsive">
                                 <thead>
                                     <tr>
                                         <th>Titolo</th>
                                         <th>Spettacolo</th>
-                                        <th># Biglietti</th>
+                                        <th>Biglietti</th>
                                         <th>€</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>Ciao</td>
-                                        <td>Ciao</td>
-                                        <td>Ciao</td>
-                                        <td>Ciao</td>
+                                        <td>Alla ricerca di Nemo</td>
+                                        <td>Sala 1 - 16 luglio - 21:00</td>
+                                        <td>34/50</td>
+                                        <td>xx</td>
                                     </tr>
                                     <tr>
                                         <td>bu</td>
@@ -56,12 +56,13 @@
                             </div>     
                     </center>
                     </div>
+                    <div class="spazio"><br></div>
                 </div>
                 <div class="col-md-4 col-xs-12">
                     <div class="inner_amministratore">
                         <center><h3>Programmazione</h3><br>
                             <div class="programmazione_container">
-                            <table id="programmazione" class="table table-striped">
+                            <table id="programmazione" class="table table-striped table-responsive">
                                 <thead>
                                     <tr>
                                         <th>Titolo</th>
@@ -100,12 +101,13 @@
                             </div>
                         </center>
                     </div>
+                    <div class="spazio"><br></div>
                 </div>
                 <div class="col-md-4 col-xs-12">
                     <div class="inner_amministratore">
                         <center><h3>Clienti top</h3><br>
                             <div class="clientitop_container">
-                            <table id="clientitop" class="table table-striped">
+                            <table id="clientitop" class="table table-striped table-responsive">
                                 <thead>
                                     <tr>
                                         <th>Nome</th>

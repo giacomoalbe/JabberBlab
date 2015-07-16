@@ -9,6 +9,7 @@
         <title>JB - Inserimento carta di credito</title>
     </head>
     <body class="formbody">
+    <div class="sfondo">
     <c:import url="header_form.jsp"></c:import>
         
         <div class="col-md-4 col-md-offset-4 col-xs-10 col-xs-offset-1">
@@ -47,6 +48,7 @@
         <center>
             <a class="ritorna" href="home.jsp"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>Ritorna al sito</a>
         </center>
+    </div>
     </div>
     </body>
 </html>

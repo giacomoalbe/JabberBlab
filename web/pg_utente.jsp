@@ -17,25 +17,41 @@
                         <center>
                             <h3>Film visti</h3><br>
                             <div class="filmvisti_container">
-                            <table id="filmvisti" class="table table-striped">
+                            <table id="filmvisti" class="table table-striped table-responsive">
                                 <thead>
                                     <tr>
                                         <th>Titolo</th>
                                         <th>Sala</th>
-                                        <th>Giorno</th>
-                                        <th>Orario</th>
+                                        <th>Quando</th>
+                                        <th>Posti</th>
                                         <th>€</th>
-                                        <th>Status</th>
+                                        <!--<th>Stato</th>-->
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
+                                        <td>Alla ricerca di nemo</td>
+                                        <td>Sala 1</td>
+                                        <td>16 luglio-21:00</td>
+                                        <td>4</td>
+                                        <td>8€</td>
+                                        <!--<td><button class="btn btn-warning btn-xs" id="status_film"><span class="glyphicon glyphicon-facetime-video" title="film_prenotato"></span></button></td>-->
+                                    </tr>
+                                    <tr>
+                                        <td>La spada nella roccia</td>
+                                        <td>bu</td>
+                                        <td>bu</td>
+                                        <td>bu</td>
+                                        <td>bu</td>
+                                        <!--<td><button class="btn btn-warning btn-xs" id="status_film"><span class="glyphicon glyphicon-facetime-video" title="film_prenotato"></span></button></td>-->
+                                    </tr>
+                                    <tr>
                                         <td>Ciao</td>
                                         <td>Ciao</td>
                                         <td>Ciao</td>
                                         <td>Ciao</td>
                                         <td>Ciao</td>
-                                        <td><button class="btn btn-warning btn-xs" id="status_film"><span class="glyphicon glyphicon-facetime-video" title="film_prenotato"></span></button></td>
+                                        <!--<td><button class="btn btn-warning btn-xs" id="status_film"><span class="glyphicon glyphicon-facetime-video" title="film_prenotato"></span></button></td>-->
                                     </tr>
                                     <tr>
                                         <td>bu</td>
@@ -43,29 +59,14 @@
                                         <td>bu</td>
                                         <td>bu</td>
                                         <td>bu</td>
-                                        <td><button class="btn btn-warning btn-xs" id="status_film"><span class="glyphicon glyphicon-facetime-video" title="film_prenotato"></span></button></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Ciao</td>
-                                        <td>Ciao</td>
-                                        <td>Ciao</td>
-                                        <td>Ciao</td>
-                                        <td>Ciao</td>
-                                        <td><button class="btn btn-warning btn-xs" id="status_film"><span class="glyphicon glyphicon-facetime-video" title="film_prenotato"></span></button></td>
-                                    </tr>
-                                    <tr>
-                                        <td>bu</td>
-                                        <td>bu</td>
-                                        <td>bu</td>
-                                        <td>bu</td>
-                                        <td>bu</td>
-                                        <td><button class="btn btn-success btn-xs" id="status_film"><span class="glyphicon glyphicon-facetime-video" title="film_visto"></span></button></td>
+                                        <!--<td><button class="btn btn-success btn-xs" id="status_film"><span class="glyphicon glyphicon-facetime-video" title="film_visto"></span></button></td>-->
                                     </tr>  
                                 </tbody>
                             </table>
-                            </div>     
+                            </div>
                     </center>
                     </div>
+                    <div class="spazio"><br></div>
                 </div>
                 <div class="col-md-5 col-xs-12">
                     <div class="statisticheutente_container">
@@ -86,6 +87,7 @@
                                 <p>dati</p>
                             </div>
                         </div>
+                    </div>
                         <div class="spazio"><br></div>
                         <div class="infoutente_container"> 
                             <p><b>Nome: </b>Chiara</p>
@@ -98,7 +100,7 @@
                             <p><b>Scadenza: </b>02/20</p>
                         </div>
                     </div>
-                </div>
+               
             </div>
         </div>
         <c:import url="footer.jsp"></c:import>

@@ -99,8 +99,7 @@ textarea{
 .incassi_container,
 .programmazione_container,
 .clientitop_container,
-.filmvisti_container,
-.statisticheutente_container{
+.filmvisti_container{
     max-width: 90%;
 }
 #incassi,
@@ -124,6 +123,10 @@ textarea{
     border-right: 0;
     margin: auto;
 }
+.statisticheutente_container{
+    margin-left: 0px;
+    margin-right: 0px;
+}
 .statistiche_utente_col1,
 .statistiche_utente_col2{
     border-right: 1.5px solid #333333;
@@ -141,6 +144,8 @@ textarea{
 
 .spazio{
     background-color: #6fc0ed;
+    width:100%;
+    margin: none;
 }
 
 .infoutente_container{
