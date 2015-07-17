@@ -29,11 +29,11 @@
                     </label>
                 </div>
                 <div class="col-md-4 col-md-offset-4">
-                    <button type="submit" id="sub_login" class="btn btn-default"><b>Login</b></button>            
+                    <button type="submit" id="sub_login" class="btn btn-info"><b>Login</b></button>            
                 </div>
             </div>
             </form>
-        
+            <center>oppure</center><br>
         <a href="registrazione.jsp" class="btn btn-success btn-block registrazione" role="button"><b>Registrati</b></a>
         </div>
         <br>

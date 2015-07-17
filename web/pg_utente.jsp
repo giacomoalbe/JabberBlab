@@ -32,7 +32,7 @@
                                     <tr>
                                         <td>Alla ricerca di nemo</td>
                                         <td>Sala 1</td>
-                                        <td>16 luglio-21:00</td>
+                                        <td>16 luglio - 21:00</td>
                                         <td>4</td>
                                         <td>8€</td>
                                         <!--<td><button class="btn btn-warning btn-xs" id="status_film"><span class="glyphicon glyphicon-facetime-video" title="film_prenotato"></span></button></td>-->
@@ -95,9 +95,9 @@
                             <p><b>Email: </b>chiara.dalpiaz@hotmail.it</p>
                             <p><b>Password: </b>palla</p>
                             <hr class="divisore_info">
-                            <p><b>Carta di Credito</b></p>
-                            <p><b>Codice: </b>1234 1234 1234 1234</p>
-                            <p><b>Scadenza: </b>02/20</p>
+                            <p><b>Carte di Credito</b></p>
+                            <p>Nominativo - 1234 1234 1234 1234 - Scadenza: mm/aa</p>
+                            <p>Nominativo - 1234 1234 1234 1234 - Scadenza: mm/aa</p>
                         </div>
                     </div>
                

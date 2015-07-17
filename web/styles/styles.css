@@ -172,3 +172,8 @@ textarea{
 .radio_scelta{
     text-align: center;
 }
+
+.riepilogo_container{
+    background-color: #ffffff;
+    border-radius: 10px;
+}

@@ -17,23 +17,19 @@
                 <table class="table prezzi">
                     <tr>
                         <th></th>
-                        <th>2D</th>
-                        <th>3D</th>
+                        <th>Prezzo</th>
                     </tr>
                     <tr>
                         <th>Intero</th>
                         <td>6,00€</td>
-                        <td>8,00€</td>
                     </tr>
                     <tr>
                         <th>Bambini fino a 11 anni</th>
                         <td>3,00€</td>
-                        <td>5,00€</td>
                     </tr>
                     <tr>
                         <th>Universitari</th>
                         <td>4,00€</td>
-                        <td>6,00€</td>
                     </tr>
                 </table>
                 

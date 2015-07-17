@@ -158,3 +158,22 @@ textarea{
     background-color: #333333;
     height: 0.1em;
 }
+
+.btnsceltaspettacolo{
+    margin: 0.4em;
+}
+
+.scelta_tipo_biglietto{
+    max-width: 70%;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+.radio_scelta{
+    text-align: center;
+}
+
+.riepilogo_container{
+    background-color: #ffffff;
+    border-radius: 10px;
+}
