@@ -51,7 +51,7 @@
                         <br>
                         <div class="cc_riepilogo_container">
                             <form>
-                                <button type="submit" name="pagaconcc" value="NUMEROCC" class="btn btn-default btn-block">Nominativo - 1234 1234 1234 1234</button>
+                                <button type="submit" name="pagaconcc" value="NUMEROCC" class="btn btn-default btn-block">PAGA CON: Nominativo - 1234 1234 1234 1234</button>
                                 <br>
                             </form>
                             <a role="button" class="ritorna btn btn-info btn-block" href="inserimento_carta.jsp"><span class="glyphicon glyphicon-plus"></span> <b>Aggiungi nuova carta</b></a>

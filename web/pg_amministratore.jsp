@@ -67,7 +67,7 @@
                                     <tr>
                                         <th>Titolo</th>
                                         <th>Spettacolo</th>
-                                        <th># Posti</th>
+                                        <th>Posti</th>
                                         <th>Dettagli</th>
                                     </tr>
                                 </thead>

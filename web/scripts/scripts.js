@@ -64,9 +64,10 @@ $(document).ready(function(){
                         + "<b>Durata: </b>" + val.durata + " min<br>"
                         + val.trama  + "<br>"
                         + "<a target='_blank' href='" + val.url_trailer + "'> <b>Trailer YouTube</b> </a> </div>"
-                        + "<div class='col-md-4 col-xs-12 film_modal_col2'>"
-                        + "<div class='div_spettacolo'>Spettacolo" + "</div>" /*mancano spettacoli*/
-                        +"</div>"
+                        + "<div class='col-md-4 col-xs-12 film_modal_col2'><center>"
+                        + "<div class='div_spettacolo active'><div class='div_spettacolo_sala'>Sala</div><div class='div_spettacolo_ora'>Ora</div></div>"
+                        + "<div class='div_spettacolo'><div class='div_spettacolo_sala'>Sala</div><div class='div_spettacolo_ora'>Ora</div></div>"/*mancano spettacoli*/
+                        +"</center></div>"
                         + "<div class='col-md-4 col-xs-12 film_modal_col3'>"
                         + "<center>SALA</center><br>"
                         + "<button class='btn btn btn-success btn-block'>Compra un biglietto! <span class='glyphicon glyphicon glyphicon-arrow-right'></span></button>"

@@ -5,7 +5,7 @@ import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 import org.json.simple.JSONObject;
 
-public final class comprabiglietto_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class home_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -52,73 +52,52 @@ public final class comprabiglietto_jsp extends org.apache.jasper.runtime.HttpJsp
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
-      out.write("\n");
-      out.write("\n");
-      out.write("\n");
-      out.write("\n");
-      out.write("\n");
-      out.write("<!DOCTYPE html>\n");
-      out.write("<html>\n");
-      out.write("    <head>\n");
-      out.write("        \n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("<!DOCTYPE html>\r\n");
+      out.write("<html>\r\n");
+      out.write("    <head>\r\n");
+      out.write("        \r\n");
       out.write("        ");
       if (_jspx_meth_c_import_0(_jspx_page_context))
         return;
-      out.write("\n");
-      out.write("        <title>Compra biglietto</title>\n");
-      out.write("    </head>\n");
-      out.write("    <body class=\"normalbody\">\n");
+      out.write("\r\n");
+      out.write("        <title>Jabberblab</title>\r\n");
+      out.write("    </head>\r\n");
+      out.write("    <body class=\"normalbody\">\r\n");
       out.write("        ");
       if (_jspx_meth_c_import_1(_jspx_page_context))
         return;
-      out.write("\n");
-      out.write("        <div class=\"row\">\n");
-      out.write("            <div class=\"col-md-6 col-xs-12\">\n");
-      out.write("                <center>\n");
-      out.write("                    <h3>Titolo film scelto</h3>\n");
-      out.write("                    <div class=\"bottoni_spettacolo_riga1\"><button class=\"btn btn-default btnsceltaspettacolo\">Sala 1 - Ore 21:00</button><button class=\"btn btn-default btnsceltaspettacolo\">Sala 1 - Ore 21:00</button><button class=\"btn btn-default btnsceltaspettacolo\">Sala 1 - Ore 21:00</button></div>\n");
-      out.write("                    <div class=\"bottoni_spettacolo_riga2\"><button class=\"btn btn-default btnsceltaspettacolo\">Sala 1 - Ore 21:00</button><button class=\"btn btn-default btnsceltaspettacolo\">Sala 1 - Ore 21:00</button></div>\n");
-      out.write("                    <div class=\"sala_interattiva\">\n");
-      out.write("                        <!-- INSERIRE LA MAPPA DELLA SALA SU CUI SCEGLIERE I POSTI IN BASE ALLO SPETTACOLO SCELTO -->\n");
-      out.write("                    </div>\n");
-      out.write("                </center>\n");
-      out.write("                <div class=\"spazio\"><br></div>\n");
-      out.write("            </div>\n");
-      out.write("            <div class=\"col-md-6 col-xs-12\">\n");
-      out.write("                <center>\n");
-      out.write("                    <br><p><b>Per ogni posto selezionato, indicare il tipo di biglietto che si desidera comprare.<br>\n");
-      out.write("                        Per gli ingressi ridotti, verrà rischiesto un documento all'ingresso</b></p><br>\n");
-      out.write("                        <div class=\"scelta_tipo_biglietto_container\">\n");
-      out.write("                            <table class=\"table scelta_tipo_biglietto\">\n");
-      out.write("                                <tr>\n");
-      out.write("                                    <td><b>Posto</b></td>\n");
-      out.write("                                    <td class=\"radio_scelta\"><b>Intero</b></td>\n");
-      out.write("                                    <td class=\"radio_scelta\"><b>Ridotto (< 11 anni)</b></td>\n");
-      out.write("                                    <td class=\"radio_scelta\"><b>Universitari</b></td>\n");
-      out.write("                                </tr>\n");
-      out.write("                                <!--<tr>\n");
-      out.write("                                    <td>Posto 1</td>\n");
-      out.write("                                    <td class=\"radio_scelta\"><input type='radio' value='intero' checked='checked'/></td>\n");
-      out.write("                                    <td class=\"radio_scelta\"><input type='radio' value='rid_bambini'/></td>\n");
-      out.write("                                    <td class=\"radio_scelta\"><input type='radio' value='rid_uni'/></td>\n");
-      out.write("                                </tr>   RIGHE DELLA TABELLA, NE AGGIUNGO UNA PER OGNI POSTO SELEZIONATO INCREMENTANDO IL NUMERO DEL POSTO  -->                   \n");
-      out.write("                            </table>\n");
-      out.write("                        </div>\n");
-      out.write("                        <form>\n");
-      out.write("                            <button type=\"submit\" class=\"btn btn-success btn-lg\">Procedi con il pagamento <span class='glyphicon glyphicon glyphicon-arrow-right'></span></button>\n");
-      out.write("                        </form>\n");
-      out.write("                </center>\n");
-      out.write("            </div>\n");
-      out.write("            \n");
-      out.write("        </div>\n");
+      out.write("\r\n");
+      out.write("        <div class=\"film_home_append\"></div>\r\n");
+      out.write("        \r\n");
       out.write("        ");
       if (_jspx_meth_c_import_2(_jspx_page_context))
         return;
-      out.write("\n");
-      out.write("        \n");
-      out.write("        \n");
-      out.write("    </body>\n");
-      out.write("</html>");
+      out.write("\r\n");
+      out.write("        \r\n");
+      out.write("        \r\n");
+      out.write("    </body>\r\n");
+      out.write("</html>\r\n");
+      out.write("\r\n");
+      out.write("<div id=\"film_modal\" class=\"modal fade\">\r\n");
+      out.write("    <div class=\"modal-dialog\">\r\n");
+      out.write("        <div class=\"modal-content\">\r\n");
+      out.write("            <div class=\"modal-header\">\r\n");
+      out.write("               \r\n");
+      out.write("            </div>\r\n");
+      out.write("            <div class=\"modal-body\">\r\n");
+      out.write("                <div class=\"container-fluid\">\r\n");
+      out.write("                    <div class=\"row\"></div>\r\n");
+      out.write("                    </div>   \r\n");
+      out.write("                </div>\r\n");
+      out.write("            </div>\r\n");
+      out.write("        </div>\r\n");
+      out.write("    </div>\r\n");
+      out.write("</div>");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;

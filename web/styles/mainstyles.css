@@ -56,14 +56,16 @@ footer{
 .menu-item,
 .menu-item:hover,
 .menu-item:visited,
-.menu-item:active{
+.menu-item:active,
+.menu-item:focus{
     text-decoration: none;
     color: #FFFFFF;
     margin: auto;
     
 }
 
-.menu-item:hover{
+.menu-item:hover,
+.menu-item:focus{
     border-bottom: 0.3em solid #6fc0ed;
 }
 /*.menu-item:hover{*/
@@ -105,3 +107,45 @@ h3 {
     background-size: cover;
 }
 
+.dropdown-menu{
+    background-color: #333333;
+    color: #FFFFFF;
+    border: none;
+}
+
+.dropdown-menu > li > a{
+    color: #FFFFFF;
+    font-size:1.5em;
+}
+
+/* Colori del link sull'hover e sul focus */
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+ color: #6fc0ed;
+ text-decoration: none;
+ background-color: transparent;
+ font-weight: bold;
+}
+ 
+ 
+/* Colori del link nello stato active */
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus {
+ color: #6fc0ed;
+ text-decoration: none;
+ background-color: transparent;
+ outline: 0;
+}
+
+.dropdown-toggle:hover,
+.dropdown-toggle:focus{
+    background-color: transparent;
+    color: #6fc0ed;
+}
+
+.dropdown-toggle{
+    border: none;
+    background-color: transparent;
+    color: #FFFFFF;
+}

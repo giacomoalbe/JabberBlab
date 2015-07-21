@@ -53,14 +53,6 @@
                                         <td>Ciao</td>
                                         <!--<td><button class="btn btn-warning btn-xs" id="status_film"><span class="glyphicon glyphicon-facetime-video" title="film_prenotato"></span></button></td>-->
                                     </tr>
-                                    <tr>
-                                        <td>bu</td>
-                                        <td>bu</td>
-                                        <td>bu</td>
-                                        <td>bu</td>
-                                        <td>bu</td>
-                                        <!--<td><button class="btn btn-success btn-xs" id="status_film"><span class="glyphicon glyphicon-facetime-video" title="film_visto"></span></button></td>-->
-                                    </tr>  
                                 </tbody>
                             </table>
                             </div>
